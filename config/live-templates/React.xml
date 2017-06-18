@@ -1,0 +1,72 @@
+<templateSet group="React">
+  <template name="rx_module" value="const _ACTION_PREFIX = '$projectName$/$moduleName$'&#10;&#10;const $ACTION_NAME$ = `${_ACTION_PREFIX}/$ACTION_NAME$`&#10;&#10;// TODO: Connect the reducer.&#10;export default function reducer(state = {$defaultState$}, action) {&#10;    switch (action.type) {&#10;        case $ACTION_NAME$:&#10;            return {$END$}&#10;&#10;        default:&#10;            return state&#10;    }&#10;}&#10;&#10;export const $actionCreator$ = () =&gt; ({&#10;    type: $ACTION_NAME$,&#10;    payload: {$payload$},&#10;    meta: {},&#10;    error: undefined,&#10;})&#10;" description="Creates a DUCKS-module" toReformat="true" toShortenFQNames="true">
+    <variable name="projectName" expression="" defaultValue="&quot;&lt;project name&gt;&quot;" alwaysStopAt="true" />
+    <variable name="moduleName" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION_NAME" expression="" defaultValue="&quot;MY_ACTION&quot;" alwaysStopAt="true" />
+    <variable name="defaultState" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="actionCreator" expression="" defaultValue="&quot;myActionCreator&quot;" alwaysStopAt="true" />
+    <variable name="payload" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_component" value="import React from 'react'&#10;&#10;const $ComponentName$ = ({$props$}) =&gt; (&#10;    &lt;$END$/&gt;&#10;)&#10;&#10;export default $ComponentName$" description="Creates a functional component" toReformat="true" toShortenFQNames="true">
+    <variable name="ComponentName" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <variable name="props" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_component_class" value="import React from 'react'&#10;&#10;class $ComponentName$ extends React.Component {&#10;    render() {&#10;        return (&#10;            &lt;$END$/&gt;&#10;        )&#10;    }&#10;}&#10;&#10;export default $ComponentName$" description="Creates a class component" toReformat="true" toShortenFQNames="true">
+    <variable name="ComponentName" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_proptypes" value="import PropTypes from 'prop-types'&#10;$ComponentName$.propTypes = {&#10;    $prop$: PropTypes.$END$,&#10;}" description="Adds proptypes to a component" toReformat="true" toShortenFQNames="true">
+    <variable name="ComponentName" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <variable name="prop" expression="" defaultValue="&quot;prop&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_action_async" value="const $ACTION_NAME$ = `${_ACTION_PREFIX}/$ACTION_NAME$`&#10;const $ACTION_NAME$_PENDING = `${$ACTION_NAME$}_PENDING`&#10;const $ACTION_NAME$_FULFILLED = `${$ACTION_NAME$}_FULFILLED`&#10;const $ACTION_NAME$_REJECTED = `${$ACTION_NAME$}_REJECTED`" description="Creates async action types" toReformat="true" toShortenFQNames="true">
+    <variable name="ACTION_NAME" expression="" defaultValue="&quot;MY_ACTION&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_action" value="const $ACTION_NAME$ = `${_ACTION_PREFIX}/$ACTION_NAME$`" description="Creates an action type" toReformat="true" toShortenFQNames="true">
+    <variable name="ACTION_NAME" expression="" defaultValue="&quot;MY_ACTION&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_creator" value="export const $actionCreator$ = () =&gt; ({&#10;    type: $ACTION_NAME$,&#10;    payload: {$END$},&#10;    meta: {},&#10;    error: undefined,&#10;})" description="Creates an action creator" toReformat="true" toShortenFQNames="true">
+    <variable name="actionCreator" expression="" defaultValue="&quot;myActionCreator&quot;" alwaysStopAt="true" />
+    <variable name="ACTION_NAME" expression="" defaultValue="&quot;MY_ACTION&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_creator_async" value="export const $actionCreator$ = () =&gt; ({&#10;    type: $ACTION_NAME$,&#10;    payload: getPayload(),&#10;    meta: {},&#10;    error: undefined,&#10;    &#10;    async function getPayload() {&#10;        return $END$&#10;    }&#10;})" description="Creates an async action creator" toReformat="true" toShortenFQNames="true">
+    <variable name="actionCreator" expression="" defaultValue="&quot;myActionCreator&quot;" alwaysStopAt="true" />
+    <variable name="ACTION_NAME" expression="" defaultValue="&quot;MY_ACTION&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_container" value="import { connect } from 'react-redux'&#10;import $ComponentName$ from '../components/$ComponentName$'&#10;&#10;const mapStateToProps = (state) =&gt; ({&#10;    $END$&#10;})&#10;&#10;const mapDispatchToProps = (dispatch) =&gt; ({&#10;})&#10;&#10;export default connect(&#10;    mapStateToProps,&#10;    mapDispatchToProps,&#10;)($ComponentName$)" description="Creates a container class" toReformat="true" toShortenFQNames="true">
+    <variable name="ComponentName" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rx_styled" value="import styled from 'styled-components'&#10;&#10;const $ComponentName$ = styled.$ElementType$`&#10;  $END$&#10;`&#10;&#10;export default $ComponentName$" description="Creates a styled component" toReformat="true" toShortenFQNames="true">
+    <variable name="ComponentName" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <variable name="ElementType" expression="" defaultValue="&quot;div&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
