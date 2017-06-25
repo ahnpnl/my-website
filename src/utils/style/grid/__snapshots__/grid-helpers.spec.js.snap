@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`grid-helpers calcValue calculates a value 1`] = `"calc((99.9% * 1/2) - (32px - 32px * 1/2))"`;
+
+exports[`grid-helpers newBlock returns css when called without child node 1`] = `
+Array [
+  "
+    ",
+  "margin-left:10px;",
+  "
+    ",
+  "
+  ",
+]
+`;

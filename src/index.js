@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './components/App';
-import './css/style.css'
+import './css/style.scss'
 import './css/normalize.css'
 import './css/grid.css'
 import './css/queries.css'

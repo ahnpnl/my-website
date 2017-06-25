@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import loginForm from './modules/loginForm'
+import deviceInfo from './modules/deviceInfo'
 
 const reducers = combineReducers({
-    loginForm,
+    deviceInfo,
 });
 
 export default reducers
