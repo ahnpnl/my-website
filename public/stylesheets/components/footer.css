@@ -1,0 +1,64 @@
+/* Regular font family
+ * @type List
+ */
+/* Code (monospace) font family
+ * @type List
+ */
+/* colors */
+/* Here we define the breakpoints which will become the upper border for each media size. */
+/* Media Queries */
+/* Here we define the lower and upper bounds for each media size */
+/* 320px, 767px */
+/* 768px, 1023px */
+/* 1024px, 1199px */
+/* 1200px */
+/*
+ * Responsive mode
+ * Set to false to enable support for browsers that do not support @media queries, (IE <= 8, Firefox <= 3, Opera <= 9)
+ * Example: http://sass-mq.github.io/sass-mq/#undefined-variable-mq-responsive
+ */
+/*
+ * Static breakpoint (for fixed-width layouts)
+ * Define the breakpoint from $mq-breakpoints that should be used as the target width for the fixed-width layout
+ * (i.e. when $mq-responsive is set to 'false') in a old-ie.scss
+ * Example: http://sass-mq.github.io/sass-mq/#undefined-variable-mq-static-breakpoint
+ */
+/*
+ * zIndex
+ */
+footer {
+  background-color: #333339;
+  padding: 50px;
+  font-size: 80%;
+  color: #f6f8fa; }
+
+.footer__row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: center; }
+  .footer__row h2 {
+    margin-bottom: 0; }
+
+.footer__row__nav {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; }
+  @media screen and (min-width: 768px) {
+    .footer__row__nav {
+      flex-direction: row;
+      justify-content: center; } }
+
+.footer__row__nav > ul {
+  list-style-type: none; }
+
+.footer__nav__link {
+  margin-right: 15px; }
+  .footer__nav__link:hover, .footer__nav__link:active, .footer__nav__link:focus {
+    border-bottom: none;
+    transition: color 0.2s; }
+
+.footer__subfooter {
+  text-align: center; }
+
+/*# sourceMappingURL=footer.css.map */

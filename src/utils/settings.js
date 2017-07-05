@@ -1,0 +1,4 @@
+/* Constants */
+export const DEVICE_SMALL_UPPER_BOUND = 767
+export const DEVICE_MEDIUM_UPPER_BOUND = 1023
+export const DEVICE_LARGE_UPPER_BOUND = 1199

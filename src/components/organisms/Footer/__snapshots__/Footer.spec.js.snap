@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders without any issues 1`] = `
+<footer>
+  <div
+    className="footer__row"
+  >
+    <div
+      className="footer__row__nav"
+    >
+      <a
+        className="footer__nav__link"
+        href=""
+      >
+        About us
+      </a>
+      <a
+        className="footer__nav__link"
+        href=""
+      >
+        Blog
+      </a>
+      <a
+        className="footer__nav__link"
+        href=""
+      >
+        Press
+      </a>
+      <a
+        className="footer__nav__link"
+        href=""
+      >
+        iOS App
+      </a>
+      <a
+        className="footer__nav__link"
+        href=""
+      >
+        Android App
+      </a>
+    </div>
+    <div
+      className="footer__row__nav"
+    >
+      <a
+        className="footer__nav__link"
+        href=""
+      >
+        <svg
+          aria-labelledby="icon-facebook-title"
+          className={undefined}
+          role="img"
+        >
+          <title>
+            facebook
+          </title>
+          <use
+            pointerEvents="none"
+            xlinkHref="#icons-facebook"
+          />
+        </svg>
+      </a>
+      <a
+        className="footer__nav__link"
+        href=""
+      >
+        <svg
+          aria-labelledby="icon-twitter-title"
+          className={undefined}
+          role="img"
+        >
+          <title>
+            twitter
+          </title>
+          <use
+            pointerEvents="none"
+            xlinkHref="#icons-twitter"
+          />
+        </svg>
+      </a>
+      <a
+        className="footer__nav__link"
+        href=""
+      >
+        <svg
+          aria-labelledby="icon-instagram-title"
+          className={undefined}
+          role="img"
+        >
+          <title>
+            instagram
+          </title>
+          <use
+            pointerEvents="none"
+            xlinkHref="#icons-instagram"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div
+    className="footer__subfooter"
+  >
+    Copyright © 2017 by Omnifood. All rights reserved.
+  </div>
+</footer>
+`;

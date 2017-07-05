@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component renders a facebook Icon 1`] = `
+<svg
+  aria-labelledby="icon-facebook-title"
+  className={undefined}
+  role="img"
+>
+  <title>
+    facebook
+  </title>
+  <use
+    pointerEvents="none"
+    xlinkHref="#icons-facebook"
+  />
+</svg>
+`;

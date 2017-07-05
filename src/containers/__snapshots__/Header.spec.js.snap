@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header mapDispatchToProps dispatches a close action 1`] = `
+Object {
+  "error": undefined,
+  "meta": Object {},
+  "payload": false,
+  "type": "my-website/header/SET_OPEN_STATE",
+}
+`;
+
+exports[`Header mapDispatchToProps dispatches an open action 1`] = `
+Object {
+  "error": undefined,
+  "meta": Object {},
+  "payload": true,
+  "type": "my-website/header/SET_OPEN_STATE",
+}
+`;

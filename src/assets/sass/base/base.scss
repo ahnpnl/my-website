@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+@font-face {
+  font-family: 'Lato', 'Arial', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Lato:100,300,300i,400');
+}
+
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: map_get($colors, 'trout');
+  background-color: map_get($base, 'backgroundColor');
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: map_get($colors, 'athensGray');
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+
+  @include on-event {
+    color: map_get($colors, 'tahitiGold');
+    border-bottom-color: map_get($colors, 'tahitiGold');
+    transition: border-bottom 0.2s;
+  }
+}
+
+/* set the svg path properties to inherit if you want to be able to style them through the <use> element */
+[id^=icons] path, [id^=sprites] path {
+  fill: inherit;
+}
+
+.nav__item {
+  padding: 12px;
+}
+
+svg {
+  display: inline-flex;
+  flex-shrink: 1;
+
+  width: map-deep-get($base, 'icon', 'footerSocialMedia');
+  height: map-deep-get($base, 'icon', 'footerSocialMedia');
+
+  fill: currentColor;
+
+  use {
+    fill: inherit;
+  }
+
+  @include stepScale('width', map-deep-get($base, 'icon', 'small'), map-deep-get($base, 'icon', 'normal'));
+  @include stepScale('height', map-deep-get($base, 'icon', 'small'), map-deep-get($base, 'icon', 'normal'));
+}

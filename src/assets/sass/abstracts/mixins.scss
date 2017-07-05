@@ -1,0 +1,217 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Add `&hover`, `&active`, `&focus` when styling a link
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Screen helper
+/// @param {String} size - Either `small`, `medium`, `large` or empty value
+/// @example scss - Usage
+/// .foo {
+///   @include screen('small');
+///   background-color: red;
+/// }
+/// @example css - Result
+/// .foo {
+///   @media screen and (min-width: 320px) {
+///     background-color: red;
+///   }
+/// }
+@mixin screen($size, $type: min, $pixels: map_get($mq-breakpoints, 'small')) {
+  @if ($size == 'small') {
+    @media screen and ($type + -width: map_get($mq-breakpoints, 'small')) {
+      @content;
+    }
+  } @else if ($size == 'med') {
+    @media screen and ($type + -width: map_get($mq-breakpoints, 'medium')) {
+      @content;
+    }
+  } @else if ($size == 'large') {
+    @media screen and ($type + -width: map_get($mq-breakpoints, 'large')) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/// Box-sizing helper
+/// @param {String} $type - Either `border-box`, `padding-box` or `content-box`
+/// @example scss - Usage
+/// .foo {
+///   @include box-sizing(border-box);
+/// }
+/// @example css - Result
+/// .foo {
+///   box-sizing: border-box;
+/// }
+@mixin box-sizing($type) {
+  box-sizing: $type;
+}
+
+/// Set background image with .svg and fallback
+/// @param {String} name - File name of the background image
+/// @param {Number} size - Set value for CSS attribute background-size
+/// @require $mq-breakpoints
+/// @example css - Usage
+/// .foo {
+///   @include background-image('foo', 'cover')
+/// }
+/// @example css - Result
+/// .foo {
+///   background-image: url('../../assets/img/foo.svg');
+///   background-size: cover;
+/// }
+$image-path: '../../assets/img/' !default;
+$fallback-extension: '.png' !default;
+@mixin backgroundImage($name, $size: false) {
+  $image-url: $image-path + $name;
+  @debug $image-url;
+  background-image: url($image-url + '.jpg');
+  @if ($size) {
+    background-size: $size;
+  }
+  .no-svg & {
+    background-image: url($image-url + $fallback-extension);
+  }
+}
+
+/// Set some attributes related to heading like `margin-bottom`, `font-weight`, `line-height` and `verticle-align`
+/// @example css - Usage
+/// .foo {
+///   @include setHeading()
+/// }
+/// @example css- Result
+/// .foo {
+///   margin-bottom: 16px;
+///   font-weight: 600;
+///   line-height: 1.35;
+///   verticle-align: baseline;
+@mixin setHeading() {
+  margin-bottom: map_get($base, 'unit');
+  font-weight: map_get($heading, 'weight');
+  line-height: map_get($heading, 'lineHeight');
+  vertical-align: baseline;
+}
+
+/// Return width of the breakpoint
+/// @param {String} $name - breakpoint name
+/// @require $mq-breakpoints
+/// @return {*} - Width of a breakpoint
+@function mq-get-breakpoint-width($name, $breakpoints) {
+  @if map_has_key($breakpoints, $name) {
+    @return map_get($breakpoints, $name);
+  } @else {
+    @warn "Breakpoint #{$name} wasn't found in $mq-breakpoints. ";
+  }
+}
+
+/// Media query mixin
+/// @param {String or Boolean} $from - (false) - The lower bound of a screen size
+/// @param {String or Boolean} $until - (false) - The upper bound of a screen size
+/// @param {String or Boolean} $and - 	(false) - Additional media query parameters
+/// @param {String} $media-type - ($mq-media-type) - Media type: `screen`, `print`…
+/// @example visit link: http://sass-mq.github.io/sass-mq/#undefined-mixin-mq
+@mixin mq($from, $until: false, $and: false, $media-type: $screen) {
+  $min-width: 0;
+  $max-width: 0;
+  $media-query: '';
+
+  // From: this breakpoint (inclusive)
+  @if ($from) {
+    @if (type_of($from) == number) {
+      $min-width: $from;
+    } @else {
+      $min-width: mq-get-breakpoint-width($from, $mq-breakpoints);
+    }
+  }
+
+  // Until: that breakpoint (exclusive)
+  @if ($until) {
+    @if (type_of($until) == number) {
+      $max-width: $until;
+    } @else {
+      $max-width: mq-get-breakpoint-width($until, $mq-breakpoints);
+    }
+  }
+
+  @if ($mq-responsive == false) {
+    $static-breakpoint-width: mq-get-breakpoint-width($mq-static-breakpoint, $mq-breakpoints);
+    $target-width: $static-breakpoint-width;
+
+    // Output only rules that start at or span our target width
+    @if ($and == false and $min-width <= $target-width and ($until == false or $max-width >= $target-width)) {
+      @content;
+    }
+  } @else {
+    @if $min-width != 0 {
+      $media-query: '#{$media-query} and (min-width: #{$min-width}px)';
+    }
+    @if $max-width != 0 {
+      $media-query: '#{$media-query} and (max-width: #{$max-width}px)';
+    }
+    @if $and {
+      $media-query: '#{$media-query} and #{$and}';
+    }
+
+    // Remove unnecessary media query prefix 'all and'
+    @if ($media-type == 'all' and $media-query != '') {
+      $media-type: '';
+      $media-query: str-slice(unquote($media-query), 6);
+    }
+
+    @media #{$media-type + $media-query} {
+      @content;
+    }
+  }
+}
+
+/// Scale any css attributes according to breakpoints
+/// @param {String} attr - All kinds of css attributes. For example: `width`, `height`...
+/// @param {Number} smallVal - Measure unit for only small screens
+/// @param {Number} mediumVal - Measure unit for medium up screens
+/// @param {Number} largeVal - Measure unit for large up screens
+/// @example css - Usage
+/// .foo {
+///   @include stepScale('width', 15px)
+/// }
+/// @example css - Result
+/// .foo {
+///   @media screen and (min-width: 320px) {
+///     width: 15px;
+///   }
+/// }
+@mixin stepScale($attr: undefined, $smallVal: undefined, $mediumVal: undefined, $largeVal: undefined) {
+  @include mq(nth($small-only, 1)) {
+    #{$attr}: $smallVal;
+  }
+
+  @include mq(nth($medium-up, 1)) {
+    #{$attr}: $mediumVal;
+  }
+
+  @include mq(nth($large-up, 1)) {
+    #{$attr}: $largeVal;
+  }
+}
+
+

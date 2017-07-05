@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header components renders a logo and a navigation button on small screen 1`] = `
+<header>
+  <nav>
+    <div
+      className="logo"
+    >
+      <img
+        alt="Omnifood logo"
+        className="logo"
+        src="logo-white.png"
+      />
+    </div>
+    <div
+      className="main__nav__compactmenu"
+    >
+      <a
+        className="compactmenu__link"
+        href=""
+        onClick={[Function]}
+      >
+        <svg
+          aria-labelledby="icon-category-title"
+          className={undefined}
+          role="img"
+        >
+          <title>
+            category
+          </title>
+          <use
+            pointerEvents="none"
+            xlinkHref="#icons-category"
+          />
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header>
+`;
+
+exports[`Header components renders a logo and normal navigation on medium up screen 1`] = `
+<header>
+  <nav>
+    <div
+      className="logo"
+    >
+      <img
+        alt="Omnifood logo"
+        className="logo"
+        src="logo-white.png"
+      />
+    </div>
+    <ul
+      className="main-nav"
+    >
+      <li
+        className="nav__item"
+      >
+        <a
+          className="main-nav__link"
+          href="#features"
+        >
+          Food delivery
+        </a>
+      </li>
+      <li
+        className="nav__item"
+      >
+        <a
+          className="main-nav__link"
+          href="#works"
+        >
+          How it works
+        </a>
+      </li>
+      <li
+        className="nav__item"
+      >
+        <a
+          className="main-nav__link"
+          href="#cities"
+        >
+          Our cities
+        </a>
+      </li>
+      <li
+        className="nav__item"
+      >
+        <a
+          className="main-nav__link"
+          href="#plans"
+        >
+          Sign up
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;

@@ -1,0 +1,106 @@
+%baseButton {
+  display: flex;
+  appearance: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  padding: map-deep-get($button, 'padding', 'vertical') map-deep-get($button, 'padding', 'horizontal');
+  color: currentColor;
+  border: 0;
+  border-radius: map_get($button, 'borderRadius');
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: map_get($font, 'size');
+  font-weight: map_get($button, 'fontWeight');
+  line-height: map-deep-get($base, 'icon', 'size', 'small');
+  text-shadow: 0 1px 0 rgba(255,255,255,0.69);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+%primary {
+  color: map_get($font, 'color');
+  background-color: map-deep-get($button, 'backgroundColor', 'primary');
+  box-shadow: inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'primary');
+
+  &:hover {
+    background-color: map-deep-get($button, 'hoverBackgroundColor', 'primary');
+    text-decoration: none;
+    box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13),
+                inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'primary');
+  }
+}
+
+%secondary {
+  color: map_get($font, 'color');
+  background-color: map-deep-get($button, 'backgroundColor', 'secondary');
+  box-shadow: inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'secondary');
+
+  &:hover {
+    background-color: map-deep-get($button, 'hoverBackgroundColor', 'secondary');
+    box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13),
+                inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'secondary');
+  }
+}
+
+%success {
+  color: map_get($colors, 'aquaHaze');
+  text-shadow: none;
+  background-color: map-deep-get($button, 'backgroundColor', 'success');
+  box-shadow: inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'success');
+
+  &:hover {
+    box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13),
+                inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'success');
+  }
+}
+
+%error {
+  color: map_get($colors, 'aquaHaze');
+  text-shadow: none;
+  background-color: map-deep-get($button, 'backgroundColor', 'error');
+  box-shadow: inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'error');
+
+  &:hover {
+    box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13),
+                inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'error');
+  }
+}
+
+%close {
+  background: transparent;
+  color: map_get($colors, 'black');
+  box-shadow: none;
+
+  &:hover {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+.btn {
+  &--primary {
+    @extend %baseButton;
+    @extend %primary;
+  }
+  &--secondary {
+    @extend %baseButton;
+    @extend %secondary;
+  }
+  &--success {
+    @extend %baseButton;
+    @extend %success;
+  }
+  &--error {
+    @extend %baseButton;
+    @extend %error;
+  }
+  &--close {
+    @extend %baseButton;
+    @extend %close;
+  }
+}

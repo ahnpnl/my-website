@@ -1,0 +1,35 @@
+@lost gutter 32px;
+@lost flexbox no-flex;
+@lost cycle auto;
+@lost clearing both;
+@lost rounder 99.9;
+@lost --beta-direction ltr;
+
+.grid-item {
+  background: #2c3e50;
+  margin-bottom: 20px;
+  color: #FFF;
+  height: 100px;
+}
+
+.grid-one {
+  lost-center: 100% 20px;
+}
+
+@media screen and (min-width: 320px) {
+  .grid-item {
+    lost-column: 1/1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid-item {
+    lost-column: 1/3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-item {
+    lost-column: 1/4 4;
+  }
+}

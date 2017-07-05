@@ -1,0 +1,142 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>My-website - v0.1.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="My-website - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">My-website - 0.1.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="map-deep-get" data-type="function"><a href="#undefined-function-map-deep-get">map-deep-get</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="mq-get-breakpoint-width" data-type="function"><a href="#undefined-function-mq-get-breakpoint-width">mq-get-breakpoint-width</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="on-event" data-type="mixin"><a href="#undefined-mixin-on-event">on-event</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="screen" data-type="mixin"><a href="#undefined-mixin-screen">screen</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="box-sizing" data-type="mixin"><a href="#undefined-mixin-box-sizing">box-sizing</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="setHeading" data-type="mixin"><a href="#undefined-mixin-setHeading">setHeading</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="mq" data-type="mixin"><a href="#undefined-mixin-mq">mq</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="stepScale" data-type="mixin"><a href="#undefined-mixin-stepScale">stepScale</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="image-path" data-type="variable"><a href="#undefined-variable-image-path">image-path</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-map-deep-get"><h3 class="item__heading"><a class="item__name" href="#function-map-deep-get">map-deep-get</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function map-deep-get($map, $keys...) { 
+  @each $key in $keys {
+    $map: map_get($map, $key);
+  }
+  @return $map;
+ }" data-collapsed="@function map-deep-get($map, $keys...) { ... }"><code>@function map-deep-get($map, $keys...) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Map deep get function to get nested items inside a map of variables</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc"><p>Map</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$keys</code></th><td data-label="desc"><p>Key chain</p></td><td data-label="type"><code>Arglist</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline">Any type &mdash;<p>Desired value</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>$m-breakpoint: map-deep-get($o-grid-default-config, &quot;layouts&quot;, &quot;M&quot;);</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Hugo Giraudel</p></li></ul></section><section class="main__item container item" id="undefined-function-mq-get-breakpoint-width"><h3 class="item__heading"><a class="item__name" href="#function-mq-get-breakpoint-width">mq-get-breakpoint-width</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function mq-get-breakpoint-width($name) { 
+  @if map_has_key($breakpoints, $name) {
+    @return map_get($breakpoints, $name);
+  } @else {
+    @warn &quot;Breakpoint #{$name} wasn&#39;t found in $mq-breakpoints. &quot;;
+  }
+ }" data-collapsed="@function mq-get-breakpoint-width($name) { ... }"><code>@function mq-get-breakpoint-width($name) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return width of the breakpoint</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$name</code></th><td data-label="desc"><p>breakpoint name</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline">Any type &mdash;<p>Width of a breakpoint</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-mq"><code>mq</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-mq"><code>mq</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-mq"><code>mq</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-on-event"><h3 class="item__heading"><a class="item__name" href="#mixin-on-event">on-event</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin on-event($self: false) { 
+  @if $self {
+    &amp;,
+    &amp;:hover,
+    &amp;:active,
+    &amp;:focus {
+      @content;
+    }
+  } @else {
+    &amp;:hover,
+    &amp;:active,
+    &amp;:focus {
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin on-event($self: false) { ... }"><code>@mixin on-event($self: false) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add <code>&amp;hover</code>, <code>&amp;active</code>, <code>&amp;focus</code> when styling a link</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$self</code></th><td data-label="desc"><p>Whether or not to include current selector</p></td><td data-label="type"><code>Bool</code></td><td data-label="default"><code>false</code></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).</p><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://twitter.com/csswizardry/status/478938530342006784">Original tweet from Harry Roberts</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Harry Roberts</p></li></ul></section><section class="main__item container item" id="undefined-mixin-screen"><h3 class="item__heading"><a class="item__name" href="#mixin-screen">screen</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin screen($size) { 
+  @if ($size == &#39;small&#39;) {
+    @media screen and ($type + -width: map_get($mq-breakpoints, &#39;small&#39;)) {
+      @content;
+    }
+  } @else if ($size == &#39;med&#39;) {
+    @media screen and ($type + -width: map_get($mq-breakpoints, &#39;medium&#39;)) {
+      @content;
+    }
+  } @else if ($size == &#39;large&#39;) {
+    @media screen and ($type + -width: map_get($mq-breakpoints, &#39;large&#39;)) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+ }" data-collapsed="@mixin screen($size) { ... }"><code>@mixin screen($size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Screen helper</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>Either <code>small</code>, <code>medium</code>, <code>large</code> or empty value</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>.foo {
+  @include screen(&#39;small&#39;);
+  background-color: red;
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Result</p></div><pre class="example__code language-css"><code>.foo {
+  @media screen and (min-width: 320px) {
+    background-color: red;
+  }
+}</code></pre></div></section><section class="main__item container item" id="undefined-mixin-box-sizing"><h3 class="item__heading"><a class="item__name" href="#mixin-box-sizing">box-sizing</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin box-sizing($type) { 
+  box-sizing: $type;
+ }" data-collapsed="@mixin box-sizing($type) { ... }"><code>@mixin box-sizing($type) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Box-sizing helper</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$type</code></th><td data-label="desc"><p>Either <code>border-box</code>, <code>padding-box</code> or <code>content-box</code></p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>.foo {
+  @include box-sizing(border-box);
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Result</p></div><pre class="example__code language-css"><code>.foo {
+  box-sizing: border-box;
+}</code></pre></div></section><section class="main__item container item" id="undefined-mixin-setHeading"><h3 class="item__heading"><a class="item__name" href="#mixin-setHeading">setHeading</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin setHeading() { 
+  margin-bottom: map_get($base, &#39;unit&#39;);
+  font-weight: map_get($heading, &#39;weight&#39;);
+  line-height: map_get($heading, &#39;lineHeight&#39;);
+  vertical-align: baseline;
+ }" data-collapsed="@mixin setHeading() { ... }"><code>@mixin setHeading() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set some attributes related to heading like <code>margin-bottom</code>, <code>font-weight</code>, <code>line-height</code> and <code>verticle-align</code></p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-css"><code>.foo {
+  @include setHeading()
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Result</p></div><pre class="example__code language-css"><code>.foo {
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  verticle-align: baseline;</code></pre></div></section><section class="main__item container item" id="undefined-mixin-mq"><h3 class="item__heading"><a class="item__name" href="#mixin-mq">mq</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin mq($from, $until, $and, $media-type) { 
+  $min-width: 0;
+  $max-width: 0;
+  $media-query: &#39;&#39;;
+
+  // From: this breakpoint (inclusive)
+  @if ($from) {
+    @if (type_of($from) == number) {
+      $min-width: $from;
+    } @else {
+      $min-width: mq-get-breakpoint-width($from, $mq-breakpoints);
+    }
+  }
+
+  // Until: that breakpoint (exclusive)
+  @if ($until) {
+    @if (type_of($until) == number) {
+      $max-width: $until;
+    } @else {
+      $max-width: mq-get-breakpoint-width($until, $mq-breakpoints);
+    }
+  }
+
+  @if ($mq-responsive == false) {
+    $static-breakpoint-width: mq-get-breakpoint-width($mq-static-breakpoint, $mq-breakpoints);
+    $target-width: $static-breakpoint-width;
+
+    // Output only rules that start at or span our target width
+    @if ($and == false and $min-width &lt;= $target-width and ($until == false or $max-width &gt;= $target-width)) {
+      @content;
+    }
+  } @else {
+    @if $min-width != 0 {
+      $media-query: &#39;#{$media-query} and (min-width: #{$min-width}px)&#39;;
+    }
+    @if $max-width != 0 {
+      $media-query: &#39;#{$media-query} and (max-width: #{$max-width}px)&#39;;
+    }
+    @if $and {
+      $media-query: &#39;#{$media-query} and #{$and}&#39;;
+    }
+
+    // Remove unnecessary media query prefix &#39;all and&#39;
+    @if ($media-type == &#39;all&#39; and $media-query != &#39;&#39;) {
+      $media-type: &#39;&#39;;
+      $media-query: str-slice(unquote($media-query), 6);
+    }
+
+    @media #{$media-type + $media-query} {
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin mq($from, $until, $and, $media-type) { ... }"><code>@mixin mq($from, $until, $and, $media-type) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Media query mixin</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$from</code></th><td data-label="desc"><p>(false) - The lower bound of a screen size</p></td><td data-label="type"><code>String or boolean</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$until</code></th><td data-label="desc"><p>(false) - The upper bound of a screen size</p></td><td data-label="type"><code>String or boolean</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$and</code></th><td data-label="desc"><p>(false) - Additional media query parameters</p></td><td data-label="type"><code>String or boolean</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$media-type</code></th><td data-label="desc"><p>($mq-media-type) - Media type: <code>screen</code>, <code>print</code>…</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>visit link: http://sass-mq.github.io/sass-mq/#undefined-mixin-mq</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-mq-get-breakpoint-width"><code>mq-get-breakpoint-width</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-mq-get-breakpoint-width"><code>mq-get-breakpoint-width</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-mq-get-breakpoint-width"><code>mq-get-breakpoint-width</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-stepScale"><code>stepScale</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-stepScale"><code>stepScale</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-stepScale"><code>stepScale</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-stepScale"><h3 class="item__heading"><a class="item__name" href="#mixin-stepScale">stepScale</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin stepScale($attr, $smallVal, $mediumVal, $largeVal) { 
+  @include mq(nth($small-only, 1)) {
+    $attr: $smallVal;
+  }
+
+  @include mq(nth($medium-up, 1)) {
+    $attr: $mediumVal;
+  }
+
+  @include mq(nth($large-up, 1)) {
+    $attr: $largeVal;
+  }
+ }" data-collapsed="@mixin stepScale($attr, $smallVal, $mediumVal, $largeVal) { ... }"><code>@mixin stepScale($attr, $smallVal, $mediumVal, $largeVal) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Scale any css attributes according to breakpoints</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$attr</code></th><td data-label="desc"><p>All kinds of css attributes. For example: <code>width</code>, <code>height</code>...</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$smallVal</code></th><td data-label="desc"><p>Measure unit for only small screens</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$mediumVal</code></th><td data-label="desc"><p>Measure unit for medium up screens</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$largeVal</code></th><td data-label="desc"><p>Measure unit for large up screens</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-css"><code>.foo {
+  @include stepScale(&#39;width&#39;, 15px)
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Result</p></div><pre class="example__code language-css"><code>.foo {
+  @media screen and (min-width: 320px) {
+    width: 15px;
+  }
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-mq"><code>mq</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-mq"><code>mq</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-mq"><code>mq</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-image-path"><h3 class="item__heading"><a class="item__name" href="#variable-image-path">image-path</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$image-path: &#39;../../assets/img/&#39; !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set background image with .svg and fallback</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-css"><code>.foo {
+  @include background-image(&#39;foo&#39;, &#39;cover&#39;)
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Result</p></div><pre class="example__code language-css"><code>.foo {
+  background-image: url(&#39;../../assets/img/foo.svg&#39;);
+  background-size: cover;
+}</code></pre></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">My-website</span><!-- Version --> <span class="project-info__version">- v0.1.0</span><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

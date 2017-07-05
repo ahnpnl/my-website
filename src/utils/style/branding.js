@@ -58,20 +58,29 @@ export const heading = {
 }
 
 export const button = {
+  padding: {
+    vertical: rem('8px'),
+    horizontal: rem('8px'),
+  },
+  fontWeight: font.weight.bold,
+  lineHeight: rem('18px'),
   backgroundColor: {
     primary: colors.supernova,
     secondary: colors.athensGray,
+    success: colors.fruitSalad,
+    error: colors.wellRead,
   },
-  fontWeight: font.weight.bold,
-  border: {
-    radius: rem('2px'),
-    color: base.borderColor,
-    style: 'solid',
-    width: 0,
+  hoverBackgroundColor: {
+    primary: colors.dandelion,
+    secondary: colors.gallery,
   },
-  boxShadow: {
-
-  }
+  borderRadius: rem('2px'),
+  borderColor: {
+    primary: colors.buddhaGold,
+    secondary: colors.loblolly,
+    success: colors.apple,
+    error: colors.tamarillo,
+  },
 }
 
 export const link = {

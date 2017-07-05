@@ -78,26 +78,83 @@ export const renderButton = new (function () {
     display: flex;
     appearance: none;
     position: relative;
-    padding: ${ rem('8px') };
-    width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
     vertical-align: middle;
-    text-decoration: none;
-    border-radius: ${ rem('2px') };
-    border-width: ${button.border.width};
-    font-weight: ${button.fontWeight};
+    padding: ${ button.padding.vertical } ${ button.padding.horizontal };
+    color: currentColor;
+    border: 0;
+    border-radius: ${ button.borderRadius };
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+    font-size: ${ font.size };
+    font-weight: ${ button.fontWeight };
+    line-height: ${ base.icon.size.small };
     text-shadow: 0 ${ rem('1px') } 0 rgba(255,255,255,0.69);
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
   `
   this.primary = css`
-    ${this.baseButton};
-    background-color: ${ button.backgroundColor.primary} ;
-    box-shadow: inset 0 ${ rem('-1px') } 0 0 #D7AC00;
+    ${ this.baseButton };
+    color: ${ font.color };
+    background-color: ${ button.backgroundColor.primary };
+    box-shadow: inset 0 ${ rem('-1px') } 0 0 ${ button.borderColor.primary };
+    
+    &:hover {
+      background-color: ${ button.hoverBackgroundColor.primary };
+      text-decoration: none;
+      box-shadow: inset 0 ${ rem('2px') } ${ rem('3px') } 0 rgba(0,0,0,0.13),
+                  inset 0 ${ rem('-1px') } 0 0 ${ button.borderColor.primary };
+    }
   `
   this.secondary = css`
-    ${ this.baseButton };
+    ${this.baseButton};
+    color: ${ font.color };
     background-color: ${ button.backgroundColor.secondary };
-    box-shadow: inset 0 ${ rem('-1px') } 0 0 #B9C0CA;
+    box-shadow: inset 0 ${ rem('-1px')} 0 0 ${ button.borderColor.secondary };
+    
+    &:hover {
+      background-color: ${ button.hoverBackgroundColor.secondary };
+      box-shadow: inset 0 ${ rem('2px') } ${ rem('3px') } 0 rgba(0,0,0,0.13),
+                  inset 0 ${ rem('-1px') } 0 0 ${ button.borderColor.secondary };
+    }
+  `
+  this.success = css`
+    ${ this.baseButton };
+    color: ${ colors.white };
+    text-shadow: none;
+    background-color: ${ button.backgroundColor.success };
+    box-shadow: inset 0 ${ rem('-1px') } 0 0 ${ button.borderColor.success };
+    
+    &:hover {
+      box-shadow: inset 0 ${ rem('2px') } ${ rem('3px') } 0 rgba(0,0,0,0.13),
+                  inset 0 ${ rem('-1px') } 0 0 ${ button.borderColor.success };
+    }
+  `
+  this.error = css`
+    ${ this.baseButton };
+    color: ${ colors.white };
+    text-shadow: none;
+    background-color: ${ button.backgroundColor.error };
+    box-shadow: inset 0 ${ rem('-1px') } 0 0 ${ button.borderColor.error };
+    
+    &:hover {
+      box-shadow: inset 0 ${ rem('2px') } ${ rem('3px') } 0 rgba(0,0,0,0.13),
+                  inset 0 ${ rem('-1px') } 0 0 ${ button.borderColor.error };
+    }
+  `
+  this.close = css`
+    ${ this.baseButton };
+    background: transparent;
+    color: ${ colors.black };
+    box-shadow: none;
+  
+    &:hover {
+      background: transparent;
+      box-shadow: none;
+    }
   `
 })()
 

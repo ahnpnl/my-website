@@ -1,0 +1,13 @@
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/base';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/hero';
+
