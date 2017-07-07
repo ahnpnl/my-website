@@ -1,0 +1,56 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__intro {
+  @extend .features;
+  padding: 20px;
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+
+    &:after {
+      display: block;
+      height: 2px;
+      background-color: #e67e22;
+      content: " ";
+      width: 100px;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+  }
+
+  p {
+    max-width: 700px;
+    margin-bottom: 0;
+    line-height: 145%;
+  }
+}
+
+@lost clearing both;
+@lost rounder 99.9;
+.features__specs {
+  padding: 20px;
+  lost-center: 100% 25px flex;
+  .specs__span--1--of--4 {
+    lost-row: 1/4;
+  }
+
+  @include mq(nth($medium-up, 1)) {
+    .specs__span--1--of--4 {
+      lost-column: 1/4 0 30px;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+

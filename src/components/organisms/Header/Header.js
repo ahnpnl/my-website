@@ -1,6 +1,7 @@
 // @flow
 
 import React from "react"
+import PropTypes from 'prop-types'
 import Icon from '../../atoms/Icon/Icon'
 import type { DeviceInfo } from '../../../utils/types'
 
@@ -50,6 +51,23 @@ function renderNormalNavigation() {
       <li className="nav__item"><a className="main-nav__link" href="#plans">Sign up</a></li>
     </ul>
   )
+}
+
+Header.propTypes = {
+  /**
+   * Info about the device used here to determine screen size
+   */
+  deviceInfo: PropTypes.object.isRequired,
+
+  /**
+   * Boolean indicates the open state of the navigation menu on small screen
+   */
+  isOpen: PropTypes.bool.isRequired,
+
+  /**
+   * Function which triggers open or close navigation menu on small screen
+   */
+  setOpenState: PropTypes.func.isRequired
 }
 
 export default Header

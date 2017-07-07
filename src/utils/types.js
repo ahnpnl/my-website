@@ -18,3 +18,17 @@ export type DeviceInfo = {
   orientation: string,
   deviceType: DeviceType,
 }
+
+export type GridItemType = {
+  id: number,
+  title: string,
+  text: string,
+  image?: {
+    url: string,
+    alt: string
+  }
+}
+
+export type FeaturesType = {
+  featureItems: Array<GridItemType>
+}

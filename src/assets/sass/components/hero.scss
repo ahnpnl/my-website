@@ -21,49 +21,13 @@
 
   h1 {
     text-transform: uppercase;
-  }
-}
-
-/* ----- BUTTONS ----- */
-%button {
-  display: inline-block;
-  padding: 10px 30px;
-  font-weight: 300;
-  text-decoration: none;
-  border-radius: 200px;
-  transition: background-color 0.2s, border 0.2s, color 0.2s;
-}
-
-%primary-background {
-  background-color: map_get($colors, 'tahitiGold');
-  border: 1px solid map_get($colors, 'tahitiGold');
-  margin-right: 15px;
-  @include on-event {
-    color: map_get($colors, 'aquaHaze');
-  }
-}
-
-%secondary-background {
-  border: 1px solid map_get($colors, 'tahitiGold');
-  color: map_get($colors, 'aquaHaze');
-  @include on-event {
-    color: map_get($colors, 'aquaHaze');
-    background-color: map_get($colors, 'tahitiGold');
-  }
-}
-
-.btn {
-  &--primary {
-    @extend %button;
-    @extend %primary-background;
-  }
-  &--secondary {
-    @extend %button;
-    @extend %secondary-background;
+    word-spacing: 4px;
+    letter-spacing: 1px;
   }
 }
 
 .hero__links {
   display: flex;
   flex-flow: row wrap;
+  margin-top: 10px;
 }

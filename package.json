@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
@@ -54,6 +55,7 @@
     "react-styleguidist": "^5.4.4",
     "react-test-renderer": "^15.6.1",
     "sass-loader": "^6.0.6",
+    "sassdoc": "^2.3.0",
     "style-loader": "0.17.0",
     "svg-sprite-loader": "^3.0.5",
     "svgo-loader": "^1.2.1",
@@ -75,7 +77,8 @@
     "flow:check": "flow check",
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -x 'src/**/*.spec.js' -t html -o 'coverage/flow-report'",
     "precommit": "yarn run lint",
-    "prepush": "CI=true yarn run test && yarn run flow:check"
+    "prepush": "CI=true yarn run test && yarn run flow:check",
+    "sassdoc": "sassdoc 'src/assets/sass/*'"
   },
   "jest": {
     "collectCoverageFrom": [

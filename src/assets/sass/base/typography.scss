@@ -13,20 +13,26 @@ h1, h2, h3, h4 {
 
 h1 {
   color: map_get($colors, 'aquaHaze');
-  font-weight: map-deep-get($font, 'weight', 'normal');
   @include stepScale('font-size',
     map-deep-get($heading, 'fontSize', 'h1', 'small'),
     map-deep-get($heading, 'fontSize', 'h1', 'medium'),
-    map-deep-get($heading, 'fontSize', 'h1', 'large'));
+    map-deep-get($heading, 'fontSize', 'h1', 'large')
+  );
+  font-weight: map-deep-get($font, 'weight', 'normal');
 }
 
 h2 {
-  font-size: map-deep-get($heading, 'fontSize', 'h2');
+  @include stepScale('font-size',
+    map-deep-get($heading, 'fontSize', 'h2', 'small'),
+    map-deep-get($heading, 'fontSize', 'h2', 'medium'),
+    map-deep-get($heading, 'fontSize', 'h2', 'large')
+  );
   font-weight: map-deep-get($font, 'weight', 'normal');
 }
 
 h3 {
   font-size: map-deep-get($heading, 'fontSize', 'h3');
+  font-weight: map-deep-get($font, 'weight', 'normal');
 }
 
 h4 {
@@ -39,6 +45,11 @@ h5 {
 }
 
 p {
+  @include stepScale('font-size',
+    80%,
+    90%,
+    90%
+  );
   margin-bottom: map_get($base, 'unit');
 }
 

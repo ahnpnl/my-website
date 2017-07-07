@@ -11,7 +11,7 @@ describe('Header components', () => {
     }
 
     const result = renderer.create(
-      <Header deviceInfo={deviceInfo} />
+      <Header deviceInfo={deviceInfo} isOpen={false} setOpenState={() => {}} />
     ).toJSON()
 
     expect(result).toMatchSnapshot()
@@ -25,7 +25,7 @@ describe('Header components', () => {
     }
 
     const result = renderer.create(
-      <Header deviceInfo={deviceInfo} />
+      <Header deviceInfo={deviceInfo} isOpen={false} setOpenState={() => {}} />
     ).toJSON()
 
     expect(result).toMatchSnapshot()

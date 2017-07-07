@@ -23,6 +23,7 @@ $colors: (
   redBerry: #990000,
   // yellows
   tahitiGold: #e67e22,
+  california: #E69230,
   dandelion: #fedf6f,
   supernova: #ffcc00,
   buddhaGold: #D7AC00,
@@ -151,12 +152,16 @@ $base: (
 $heading: (
   fontSize: (
     h1: (
-      small: 28px,
-      medium: 35px,
-      large: 38px,
+      small: 160%,
+      medium: 220%,
+      large: 220%,
     ),
-    h2: 20px,
-    h3: 16px,
+    h2: (
+      small: 130%,
+      medium: 160%,
+      large: 160%
+    ),
+    h3: 100%
   ),
   lineHeight: 1.35,
   weight: 600,
@@ -165,24 +170,25 @@ $heading: (
 
 $button: (
   padding: (
-    vertical: '8px',
-    horizontal: '8px',
+    vertical: 12px,
+    horizontal: 12px,
   ),
-  fontWeight: 600,
+  fontSize: 17px,
+  fontWeight: 400,
   lineHeight: 18px,
   backgroundColor: (
-    primary: map_get($colors, 'supernova'),
+    primary: map_get($colors, 'california'),
     secondary: map_get($colors, 'athensGray'),
     success: map_get($colors, 'fruitSalad'),
     error: map_get($colors, 'wellRead'),
   ),
   hoverBackgroundColor: (
-    primary: map_get($colors, 'dandelion'),
+    primary: map_get($colors, 'tahitiGold'),
     secondary: map_get($colors, 'gallery')
   ),
-  borderRadius: '2px',
+  borderRadius: 200px,
   borderColor: (
-    primary: map_get($colors, 'buddhaGold'),
+    primary: map_get($colors, 'california'),
     secondary: map_get($colors, 'loblolly'),
     success: map_get($colors, 'apple'),
     error: map_get($colors, 'tamarillo')
