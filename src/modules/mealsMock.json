@@ -1,0 +1,44 @@
+{
+  "mealItems": [
+    {
+      "id": 1,
+      "imageURL": "https://lh3.googleusercontent.com/wC6GFOCIeGET6cKYTZ92Sc8B1_otn3XR9yuPMneDQnjLles1aQgZxg",
+      "alt": "Korean bibimbap with egg and vegetables"
+    },
+    {
+      "id": 2,
+      "imageURL": "https://lh5.googleusercontent.com/HBJd1v336yeKHT7E2QkxMRedMSIlQAMTlQgBOIMKK2W7XIJO3_FERg",
+      "alt": "Simple italian pizza with cherry tomatoes"
+    },
+    {
+      "id": 3,
+      "imageURL": "https://lh6.googleusercontent.com/NR7JPnWKmAO_stA7AQv6sHs9xht4fIusOGQ_PVOPpAi0FWqdn8hdXg",
+      "alt": "Chicken breast steak with vegetables"
+    },
+    {
+      "id": 4,
+      "imageURL": "https://lh4.googleusercontent.com/wJHFa_cjaYknI-6as4HGc0NMS0u6qKfbXkxnFrTaLMrYNHiQFTlxzA",
+      "alt": "Autumn pumpkin soup"
+    },
+    {
+      "id": 5,
+      "imageURL": "https://lh4.googleusercontent.com/XQUnaaW4UEsWmFGrM4duMWnLmYtMui8DVbww95hFP9_hZKOHpzaKcg",
+      "alt": "Paleo beef steak with vegetables"
+    },
+    {
+      "id": 6,
+      "imageURL": "https://lh4.googleusercontent.com/c03XQ2EE4Nq7wIhTqTYTXM9KIRQdFl0sgAw7Ld60ZMBlnDrmV3TfbQ",
+      "alt": "Healthy baguette with egg and vegetables"
+    },
+    {
+      "id": 7,
+      "imageURL": "https://lh4.googleusercontent.com/zaLKBJa9-EhhpuXE9AkV_fGv9GomDrIa9b217BUB_9hBo9UcIKsAKg",
+      "alt": "Burger with cheddar and bacon"
+    },
+    {
+      "id": 8,
+      "imageURL": "https://lh6.googleusercontent.com/mPAcJkxsCfXMtkexYj2F5MdrRsMYF8klzZ0xmymDoTyBg6H0jkMrQw",
+      "alt": "Granola with cherries and strawberries"
+    }
+  ]
+}

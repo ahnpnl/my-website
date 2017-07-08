@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaObjectItem component displays a media object item with an image 1`] = `
+<div
+  className="testmedia"
+>
+  <img
+    alt="Example image"
+    className="testmedia__media__img"
+    src="An example image link"
+  />
+  <div
+    className="testmedia__media__body"
+  >
+    <h3>
+      Test grid item 2
+    </h3>
+    <p>
+      A grid item with an image
+    </p>
+  </div>
+</div>
+`;

@@ -11,11 +11,13 @@ ShallowWrapper {
   "node": <div>
     <Hero />
     <Connect(Features) />
+    <Connect(Meals) />
 </div>,
   "nodes": Array [
     <div>
       <Hero />
       <Connect(Features) />
+      <Connect(Meals) />
 </div>,
   ],
   "options": Object {},
@@ -55,11 +57,13 @@ ShallowWrapper {
         "_currentElement": <div>
           <Hero />
           <Connect(Features) />
+          <Connect(Meals) />
 </div>,
         "_debugID": 2,
         "_renderedOutput": <div>
           <Hero />
           <Connect(Features) />
+          <Connect(Meals) />
 </div>,
       },
       "_renderedNodeType": 0,

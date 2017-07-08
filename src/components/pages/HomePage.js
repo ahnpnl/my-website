@@ -6,7 +6,7 @@ import Cities from '../Cities'
 import ContactForm from '../ContactForm'
 import Features from '../../containers/Features'
 import Hero from '../molecules/Hero/Hero'
-import Meals from '../Meals'
+import Meals from '../../containers/Meals'
 import Plans from '../Plans'
 import Steps from '../Steps'
 import Testimonials from '../Testimonials'
@@ -18,6 +18,7 @@ const HomePage = () => (
   <div>
     <Hero />
     <Features />
+    <Meals />
   </div>
 )
 

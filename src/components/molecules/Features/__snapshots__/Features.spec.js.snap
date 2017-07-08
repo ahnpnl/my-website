@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hero component Features correctly without issues 1`] = `
+exports[`Features component renders correctly without issues 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -24,53 +24,21 @@ ShallowWrapper {
     <div
         className="features__specs"
     >
-        <GridItem
-            className="specs__span--1--of--4"
-            gridItem={
-                Object {
-                    "id": 1,
-                    "text": "text 1",
-                    "title": "title 1",
-                  }
-            }
+        <InfoItem
+            text="text 1"
+            title="title 1"
         />
-        <GridItem
-            className="specs__span--1--of--4"
-            gridItem={
-                Object {
-                    "id": 2,
-                    "text": "text 2",
-                    "title": "title 2",
-                  }
-            }
+        <InfoItem
+            text="text 2"
+            title="title 2"
         />
-        <GridItem
-            className="specs__span--1--of--4"
-            gridItem={
-                Object {
-                    "id": 3,
-                    "image": Object {
-                      "alt": "Image 1",
-                      "url": "Example image url",
-                    },
-                    "text": "text 3",
-                    "title": "title 3",
-                  }
-            }
+        <InfoItem
+            text="text 3"
+            title="title 3"
         />
-        <GridItem
-            className="specs__span--1--of--4"
-            gridItem={
-                Object {
-                    "id": 4,
-                    "image": Object {
-                      "alt": "Image 2",
-                      "url": "Example image url",
-                    },
-                    "text": "text 4",
-                    "title": "title 4",
-                  }
-            }
+        <InfoItem
+            text="text 4"
+            title="title 4"
         />
     </div>
 </section>,
@@ -91,53 +59,21 @@ ShallowWrapper {
       <div
             className="features__specs"
       >
-            <GridItem
-                  className="specs__span--1--of--4"
-                  gridItem={
-                        Object {
-                              "id": 1,
-                              "text": "text 1",
-                              "title": "title 1",
-                            }
-                  }
+            <InfoItem
+                  text="text 1"
+                  title="title 1"
             />
-            <GridItem
-                  className="specs__span--1--of--4"
-                  gridItem={
-                        Object {
-                              "id": 2,
-                              "text": "text 2",
-                              "title": "title 2",
-                            }
-                  }
+            <InfoItem
+                  text="text 2"
+                  title="title 2"
             />
-            <GridItem
-                  className="specs__span--1--of--4"
-                  gridItem={
-                        Object {
-                              "id": 3,
-                              "image": Object {
-                                "alt": "Image 1",
-                                "url": "Example image url",
-                              },
-                              "text": "text 3",
-                              "title": "title 3",
-                            }
-                  }
+            <InfoItem
+                  text="text 3"
+                  title="title 3"
             />
-            <GridItem
-                  className="specs__span--1--of--4"
-                  gridItem={
-                        Object {
-                              "id": 4,
-                              "image": Object {
-                                "alt": "Image 2",
-                                "url": "Example image url",
-                              },
-                              "text": "text 4",
-                              "title": "title 4",
-                            }
-                  }
+            <InfoItem
+                  text="text 4"
+                  title="title 4"
             />
       </div>
 </section>,
@@ -163,19 +99,11 @@ ShallowWrapper {
                         },
                         Object {
                           "id": 3,
-                          "image": Object {
-                            "alt": "Image 1",
-                            "url": "Example image url",
-                          },
                           "text": "text 3",
                           "title": "title 3",
                         },
                         Object {
                           "id": 4,
-                          "image": Object {
-                            "alt": "Image 2",
-                            "url": "Example image url",
-                          },
                           "text": "text 4",
                           "title": "title 4",
                         },
@@ -202,19 +130,11 @@ ShallowWrapper {
             },
             Object {
               "id": 3,
-              "image": Object {
-                "alt": "Image 1",
-                "url": "Example image url",
-              },
               "text": "text 3",
               "title": "title 3",
             },
             Object {
               "id": 4,
-              "image": Object {
-                "alt": "Image 2",
-                "url": "Example image url",
-              },
               "text": "text 4",
               "title": "title 4",
             },
@@ -256,53 +176,21 @@ ShallowWrapper {
           <div
                     className="features__specs"
           >
-                    <GridItem
-                              className="specs__span--1--of--4"
-                              gridItem={
-                                        Object {
-                                                  "id": 1,
-                                                  "text": "text 1",
-                                                  "title": "title 1",
-                                                }
-                              }
+                    <InfoItem
+                              text="text 1"
+                              title="title 1"
                     />
-                    <GridItem
-                              className="specs__span--1--of--4"
-                              gridItem={
-                                        Object {
-                                                  "id": 2,
-                                                  "text": "text 2",
-                                                  "title": "title 2",
-                                                }
-                              }
+                    <InfoItem
+                              text="text 2"
+                              title="title 2"
                     />
-                    <GridItem
-                              className="specs__span--1--of--4"
-                              gridItem={
-                                        Object {
-                                                  "id": 3,
-                                                  "image": Object {
-                                                    "alt": "Image 1",
-                                                    "url": "Example image url",
-                                                  },
-                                                  "text": "text 3",
-                                                  "title": "title 3",
-                                                }
-                              }
+                    <InfoItem
+                              text="text 3"
+                              title="title 3"
                     />
-                    <GridItem
-                              className="specs__span--1--of--4"
-                              gridItem={
-                                        Object {
-                                                  "id": 4,
-                                                  "image": Object {
-                                                    "alt": "Image 2",
-                                                    "url": "Example image url",
-                                                  },
-                                                  "text": "text 4",
-                                                  "title": "title 4",
-                                                }
-                              }
+                    <InfoItem
+                              text="text 4"
+                              title="title 4"
                     />
           </div>
 </section>,
@@ -323,53 +211,21 @@ ShallowWrapper {
           <div
                     className="features__specs"
           >
-                    <GridItem
-                              className="specs__span--1--of--4"
-                              gridItem={
-                                        Object {
-                                                  "id": 1,
-                                                  "text": "text 1",
-                                                  "title": "title 1",
-                                                }
-                              }
+                    <InfoItem
+                              text="text 1"
+                              title="title 1"
                     />
-                    <GridItem
-                              className="specs__span--1--of--4"
-                              gridItem={
-                                        Object {
-                                                  "id": 2,
-                                                  "text": "text 2",
-                                                  "title": "title 2",
-                                                }
-                              }
+                    <InfoItem
+                              text="text 2"
+                              title="title 2"
                     />
-                    <GridItem
-                              className="specs__span--1--of--4"
-                              gridItem={
-                                        Object {
-                                                  "id": 3,
-                                                  "image": Object {
-                                                    "alt": "Image 1",
-                                                    "url": "Example image url",
-                                                  },
-                                                  "text": "text 3",
-                                                  "title": "title 3",
-                                                }
-                              }
+                    <InfoItem
+                              text="text 3"
+                              title="title 3"
                     />
-                    <GridItem
-                              className="specs__span--1--of--4"
-                              gridItem={
-                                        Object {
-                                                  "id": 4,
-                                                  "image": Object {
-                                                    "alt": "Image 2",
-                                                    "url": "Example image url",
-                                                  },
-                                                  "text": "text 4",
-                                                  "title": "title 4",
-                                                }
-                              }
+                    <InfoItem
+                              text="text 4"
+                              title="title 4"
                     />
           </div>
 </section>,
@@ -399,19 +255,11 @@ ShallowWrapper {
             },
             Object {
               "id": 3,
-              "image": Object {
-                "alt": "Image 1",
-                "url": "Example image url",
-              },
               "text": "text 3",
               "title": "title 3",
             },
             Object {
               "id": 4,
-              "image": Object {
-                "alt": "Image 2",
-                "url": "Example image url",
-              },
               "text": "text 4",
               "title": "title 4",
             },

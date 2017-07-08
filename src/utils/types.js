@@ -19,16 +19,24 @@ export type DeviceInfo = {
   deviceType: DeviceType,
 }
 
-export type GridItemType = {
+type ImageType = {
+  id: number,
+  imageURL: string,
+  alt: string
+}
+
+type InfoType = {
   id: number,
   title: string,
   text: string,
-  image?: {
-    url: string,
-    alt: string
-  }
 }
 
+export type MediaObjectItemType = InfoType & ImageType
+
 export type FeaturesType = {
-  featureItems: Array<GridItemType>
+  featureItems: Array<InfoType>
+}
+
+export type MealsType = {
+  mealItems: Array<ImageType>
 }

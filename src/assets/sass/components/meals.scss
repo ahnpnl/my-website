@@ -1,0 +1,28 @@
+@lost clearing both;
+@lost rounder 99.9;
+.meals {
+  lost-center: 100% map_get($base, 'unit') flex;
+  padding: map_get($base, 'unit') 0;
+  .meal__photo {
+    lost-row: 1/4 0 0;
+    overflow: hidden;
+    background-color: map_get($colors, 'pureBlack');
+  }
+
+  @include mq(nth($medium-up, 1)) {
+    .meal__photo {
+      lost-column: 1/4 0 0;
+    }
+  }
+
+  img {
+    opacity: 0.7;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+  }
+}

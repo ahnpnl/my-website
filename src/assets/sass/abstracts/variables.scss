@@ -34,7 +34,7 @@ $colors: (
   // blues
   easternBlue: #14a0be,
   /* 50 shades of gray */
-  white: #ffffff,
+  pureWhite: #ffffff,
   aquaHaze: #f6f8fa,
   gallery: #ebebeb,
   athensGray: #e1e4e8,
@@ -44,7 +44,7 @@ $colors: (
   regentGray: #8793a3,
   tuna: #333339,
   mineShaft: #333333,
-  black: #000,
+  pureBlack: #000,
   trout: #4d545d,
   manatee: #939498,
   matternhorn: #555555,
@@ -174,7 +174,7 @@ $button: (
     horizontal: 12px,
   ),
   fontSize: 17px,
-  fontWeight: 400,
+  fontWeight: 300,
   lineHeight: 18px,
   backgroundColor: (
     primary: map_get($colors, 'california'),

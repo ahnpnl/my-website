@@ -38,12 +38,12 @@
 @lost rounder 99.9;
 .features__specs {
   lost-center: 100% map_get($base, 'unit') flex;
-  .specs__span--1--of--4 {
+  .info {
     lost-row: 1/4 0 map_get($base, 'unit');
   }
 
   @include mq(nth($medium-up, 1)) {
-    .specs__span--1--of--4 {
+    .info {
       lost-column: 1/4 0 map_get($base, 'unit');
     }
   }
