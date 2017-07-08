@@ -1,100 +1,509 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header components renders a logo and a navigation button on small screen 1`] = `
-<header>
-  <nav>
-    <div
-      className="logo"
-    >
-      <img
-        alt="Omnifood logo"
-        className="logo"
-        src="logo-white.png"
-      />
-    </div>
-    <div
-      className="main__nav__compactmenu"
-    >
-      <a
-        className="compactmenu__link"
-        href=""
-        onClick={[Function]}
-      >
-        <svg
-          aria-labelledby="icon-category-title"
-          className={undefined}
-          role="img"
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <header>
+    <nav>
+        <div
+            className="logo"
         >
-          <title>
-            category
-          </title>
-          <use
-            pointerEvents="none"
-            xlinkHref="#icons-category"
-          />
-        </svg>
-      </a>
-    </div>
-  </nav>
-</header>
+            <img
+                alt="Omnifood logo"
+                className="logo"
+                src="logo-white.png"
+            />
+        </div>
+        <div
+            className="main__nav__compactmenu"
+        >
+            <a
+                className="compactmenu__link"
+                href=""
+                onClick={[Function]}
+            >
+                <Icon
+                    name="category"
+                />
+            </a>
+        </div>
+    </nav>
+</header>,
+  "nodes": Array [
+    <header>
+      <nav>
+            <div
+                  className="logo"
+            >
+                  <img
+                        alt="Omnifood logo"
+                        className="logo"
+                        src="logo-white.png"
+                  />
+            </div>
+            <div
+                  className="main__nav__compactmenu"
+            >
+                  <a
+                        className="compactmenu__link"
+                        href=""
+                        onClick={[Function]}
+                  >
+                        <Icon
+                              name="category"
+                        />
+                  </a>
+            </div>
+      </nav>
+</header>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Header
+        deviceInfo={
+                Object {
+                        "deviceType": Object {
+                          "isSmall": true,
+                        },
+                      }
+        }
+        isOpen={false}
+        setOpenState={[Function]}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "deviceInfo": Object {
+            "deviceType": Object {
+              "isSmall": true,
+            },
+          },
+          "isOpen": false,
+          "setOpenState": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <header>
+          <nav>
+                    <div
+                              className="logo"
+                    >
+                              <img
+                                        alt="Omnifood logo"
+                                        className="logo"
+                                        src="logo-white.png"
+                              />
+                    </div>
+                    <div
+                              className="main__nav__compactmenu"
+                    >
+                              <a
+                                        className="compactmenu__link"
+                                        href=""
+                                        onClick={[Function]}
+                              >
+                                        <Icon
+                                                  name="category"
+                                        />
+                              </a>
+                    </div>
+          </nav>
+</header>,
+        "_debugID": 2,
+        "_renderedOutput": <header>
+          <nav>
+                    <div
+                              className="logo"
+                    >
+                              <img
+                                        alt="Omnifood logo"
+                                        className="logo"
+                                        src="logo-white.png"
+                              />
+                    </div>
+                    <div
+                              className="main__nav__compactmenu"
+                    >
+                              <a
+                                        className="compactmenu__link"
+                                        href=""
+                                        onClick={[Function]}
+                              >
+                                        <Icon
+                                                  name="category"
+                                        />
+                              </a>
+                    </div>
+          </nav>
+</header>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Header
+    deviceInfo={
+        Object {
+            "deviceType": Object {
+              "isSmall": true,
+            },
+          }
+    }
+    isOpen={false}
+    setOpenState={[Function]}
+/>,
+}
 `;
 
 exports[`Header components renders a logo and normal navigation on medium up screen 1`] = `
-<header>
-  <nav>
-    <div
-      className="logo"
-    >
-      <img
-        alt="Omnifood logo"
-        className="logo"
-        src="logo-white.png"
-      />
-    </div>
-    <ul
-      className="main-nav"
-    >
-      <li
-        className="nav__item"
-      >
-        <a
-          className="main-nav__link"
-          href="#features"
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <header>
+    <nav>
+        <div
+            className="logo"
         >
-          Food delivery
-        </a>
-      </li>
-      <li
-        className="nav__item"
-      >
-        <a
-          className="main-nav__link"
-          href="#works"
+            <img
+                alt="Omnifood logo"
+                className="logo"
+                src="logo-white.png"
+            />
+        </div>
+        <ul
+            className="main-nav"
         >
-          How it works
-        </a>
-      </li>
-      <li
-        className="nav__item"
-      >
-        <a
-          className="main-nav__link"
-          href="#cities"
-        >
-          Our cities
-        </a>
-      </li>
-      <li
-        className="nav__item"
-      >
-        <a
-          className="main-nav__link"
-          href="#plans"
-        >
-          Sign up
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
+            <li
+                className="nav__item"
+            >
+                <a
+                    className="main-nav__link"
+                    href="#features"
+                >
+                    Food delivery
+                </a>
+            </li>
+            <li
+                className="nav__item"
+            >
+                <a
+                    className="main-nav__link"
+                    href="#works"
+                >
+                    How it works
+                </a>
+            </li>
+            <li
+                className="nav__item"
+            >
+                <a
+                    className="main-nav__link"
+                    href="#cities"
+                >
+                    Our cities
+                </a>
+            </li>
+            <li
+                className="nav__item"
+            >
+                <a
+                    className="main-nav__link"
+                    href="#plans"
+                >
+                    Sign up
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>,
+  "nodes": Array [
+    <header>
+      <nav>
+            <div
+                  className="logo"
+            >
+                  <img
+                        alt="Omnifood logo"
+                        className="logo"
+                        src="logo-white.png"
+                  />
+            </div>
+            <ul
+                  className="main-nav"
+            >
+                  <li
+                        className="nav__item"
+                  >
+                        <a
+                              className="main-nav__link"
+                              href="#features"
+                        >
+                              Food delivery
+                        </a>
+                  </li>
+                  <li
+                        className="nav__item"
+                  >
+                        <a
+                              className="main-nav__link"
+                              href="#works"
+                        >
+                              How it works
+                        </a>
+                  </li>
+                  <li
+                        className="nav__item"
+                  >
+                        <a
+                              className="main-nav__link"
+                              href="#cities"
+                        >
+                              Our cities
+                        </a>
+                  </li>
+                  <li
+                        className="nav__item"
+                  >
+                        <a
+                              className="main-nav__link"
+                              href="#plans"
+                        >
+                              Sign up
+                        </a>
+                  </li>
+            </ul>
+      </nav>
+</header>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Header
+        deviceInfo={
+                Object {
+                        "deviceType": Object {
+                          "isSmall": false,
+                        },
+                      }
+        }
+        isOpen={false}
+        setOpenState={[Function]}
+/>,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "deviceInfo": Object {
+            "deviceType": Object {
+              "isSmall": false,
+            },
+          },
+          "isOpen": false,
+          "setOpenState": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <header>
+          <nav>
+                    <div
+                              className="logo"
+                    >
+                              <img
+                                        alt="Omnifood logo"
+                                        className="logo"
+                                        src="logo-white.png"
+                              />
+                    </div>
+                    <ul
+                              className="main-nav"
+                    >
+                              <li
+                                        className="nav__item"
+                              >
+                                        <a
+                                                  className="main-nav__link"
+                                                  href="#features"
+                                        >
+                                                  Food delivery
+                                        </a>
+                              </li>
+                              <li
+                                        className="nav__item"
+                              >
+                                        <a
+                                                  className="main-nav__link"
+                                                  href="#works"
+                                        >
+                                                  How it works
+                                        </a>
+                              </li>
+                              <li
+                                        className="nav__item"
+                              >
+                                        <a
+                                                  className="main-nav__link"
+                                                  href="#cities"
+                                        >
+                                                  Our cities
+                                        </a>
+                              </li>
+                              <li
+                                        className="nav__item"
+                              >
+                                        <a
+                                                  className="main-nav__link"
+                                                  href="#plans"
+                                        >
+                                                  Sign up
+                                        </a>
+                              </li>
+                    </ul>
+          </nav>
+</header>,
+        "_debugID": 4,
+        "_renderedOutput": <header>
+          <nav>
+                    <div
+                              className="logo"
+                    >
+                              <img
+                                        alt="Omnifood logo"
+                                        className="logo"
+                                        src="logo-white.png"
+                              />
+                    </div>
+                    <ul
+                              className="main-nav"
+                    >
+                              <li
+                                        className="nav__item"
+                              >
+                                        <a
+                                                  className="main-nav__link"
+                                                  href="#features"
+                                        >
+                                                  Food delivery
+                                        </a>
+                              </li>
+                              <li
+                                        className="nav__item"
+                              >
+                                        <a
+                                                  className="main-nav__link"
+                                                  href="#works"
+                                        >
+                                                  How it works
+                                        </a>
+                              </li>
+                              <li
+                                        className="nav__item"
+                              >
+                                        <a
+                                                  className="main-nav__link"
+                                                  href="#cities"
+                                        >
+                                                  Our cities
+                                        </a>
+                              </li>
+                              <li
+                                        className="nav__item"
+                              >
+                                        <a
+                                                  className="main-nav__link"
+                                                  href="#plans"
+                                        >
+                                                  Sign up
+                                        </a>
+                              </li>
+                    </ul>
+          </nav>
+</header>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Header
+    deviceInfo={
+        Object {
+            "deviceType": Object {
+              "isSmall": false,
+            },
+          }
+    }
+    isOpen={false}
+    setOpenState={[Function]}
+/>,
+}
 `;

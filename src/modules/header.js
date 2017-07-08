@@ -1,6 +1,6 @@
 const _ACTION_PREFIX = 'my-website/header'
 
-const SET_OPEN_STATE = `${_ACTION_PREFIX}/SET_OPEN_STATE`
+export const SET_OPEN_STATE = `${_ACTION_PREFIX}/SET_OPEN_STATE`
 
 export default function reducer(state = { isOpen: false }, action) {
   switch (action.type) {

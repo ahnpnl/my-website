@@ -1,5 +1,5 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { mount, shallow } from 'enzyme'
 import Header from './Header'
 
 describe('Header components', () => {
@@ -10,9 +10,9 @@ describe('Header components', () => {
       }
     }
 
-    const result = renderer.create(
+    const result = shallow(
       <Header deviceInfo={deviceInfo} isOpen={false} setOpenState={() => {}} />
-    ).toJSON()
+    )
 
     expect(result).toMatchSnapshot()
   })
@@ -24,10 +24,33 @@ describe('Header components', () => {
       }
     }
 
-    const result = renderer.create(
+    const result = shallow(
       <Header deviceInfo={deviceInfo} isOpen={false} setOpenState={() => {}} />
-    ).toJSON()
+    )
 
     expect(result).toMatchSnapshot()
+  })
+
+  it('calls method event.preventDefault and setOpenState when clicking on the menu icon on small screen', () => {
+    const setOpenState = jest.fn()
+    let preventDefaultWasCalled = false
+    const deviceInfo = {
+      deviceType: {
+        isSmall: true
+      }
+    }
+
+    const res = mount(
+      <Header deviceInfo={deviceInfo} isOpen={false} setOpenState={setOpenState} />
+    )
+
+    res.find('a.compactmenu__link').simulate('click', {
+      preventDefault() {
+        preventDefaultWasCalled = true
+      }
+    })
+
+    expect(setOpenState).toBeCalled()
+    expect(preventDefaultWasCalled).toBe(true)
   })
 })
