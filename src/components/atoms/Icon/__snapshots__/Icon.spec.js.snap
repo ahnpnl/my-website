@@ -2,8 +2,7 @@
 
 exports[`Icon component renders a facebook Icon 1`] = `
 <svg
-  aria-labelledby="icon-facebook-title"
-  className={undefined}
+  aria-labelledby="icon__facebook-title"
   role="img"
 >
   <title>

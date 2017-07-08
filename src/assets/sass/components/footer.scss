@@ -3,7 +3,7 @@
 
 footer {
   background-color: map_get($colors, 'tuna');
-  padding: 50px;
+  padding: map_get($base, 'unit');
   font-size: 80%;
   color: map_get($colors, 'aquaHaze');
 }

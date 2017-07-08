@@ -47,8 +47,7 @@ exports[`Footer component renders without any issues 1`] = `
         href=""
       >
         <svg
-          aria-labelledby="icon-facebook-title"
-          className={undefined}
+          aria-labelledby="icon__facebook-title"
           role="img"
         >
           <title>
@@ -65,8 +64,7 @@ exports[`Footer component renders without any issues 1`] = `
         href=""
       >
         <svg
-          aria-labelledby="icon-twitter-title"
-          className={undefined}
+          aria-labelledby="icon__twitter-title"
           role="img"
         >
           <title>
@@ -83,8 +81,7 @@ exports[`Footer component renders without any issues 1`] = `
         href=""
       >
         <svg
-          aria-labelledby="icon-instagram-title"
-          className={undefined}
+          aria-labelledby="icon__instagram-title"
           role="img"
         >
           <title>

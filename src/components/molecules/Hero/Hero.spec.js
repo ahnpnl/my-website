@@ -1,12 +1,12 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 import Hero from './Hero'
 
 describe('Hero component', () => {
   it('renders correctly without issues', () => {
-    const result = renderer.create(
+    const result = shallow(
       <Hero />
-    ).toJSON()
+    )
 
     expect(result).toMatchSnapshot()
   })

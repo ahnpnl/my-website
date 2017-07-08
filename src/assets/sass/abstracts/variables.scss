@@ -134,11 +134,11 @@ $font: (
 $base: (
   backgroundColor: map_get($colors, 'aquaHaze'),
   borderColor: map_get($colors, 'athensGray'),
-  unit: 16px,
+  unit: 20px,
   spacer: 8px,
   icon: (
-    xsmall: 8px,
-    small: 16px,
+    xsmall: 16px,
+    small: 24px,
     normal: 32px,
     large: 48px,
     xlarge: 64px,

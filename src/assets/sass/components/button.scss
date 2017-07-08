@@ -21,6 +21,10 @@
   overflow: hidden;
   cursor: pointer;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
+
+  svg + span, span + svg, svg + svg {
+    margin-left: map_get($base, 'spacer');
+  }
 }
 
 %primary {
@@ -107,4 +111,10 @@
     @extend %baseButton;
     @extend %close;
   }
+}
+
+.btn__text {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
 }

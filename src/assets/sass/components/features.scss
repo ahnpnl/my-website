@@ -7,7 +7,7 @@
 
 .features__intro {
   @extend .features;
-  padding: 20px;
+  padding: map_get($base, 'unit');
 
   h2 {
     text-transform: uppercase;
@@ -22,7 +22,7 @@
       content: " ";
       width: 100px;
       margin: 0 auto;
-      margin-top: 15px;
+      margin-top: map_get($base, 'unit');
     }
   }
 
@@ -30,21 +30,21 @@
     max-width: 700px;
     margin-bottom: 0;
     line-height: 145%;
+    text-align: center;
   }
 }
 
 @lost clearing both;
 @lost rounder 99.9;
 .features__specs {
-  padding: 20px;
-  lost-center: 100% 25px flex;
+  lost-center: 100% map_get($base, 'unit') flex;
   .specs__span--1--of--4 {
-    lost-row: 1/4;
+    lost-row: 1/4 0 map_get($base, 'unit');
   }
 
   @include mq(nth($medium-up, 1)) {
     .specs__span--1--of--4 {
-      lost-column: 1/4 0 30px;
+      lost-column: 1/4 0 map_get($base, 'unit');
     }
   }
 

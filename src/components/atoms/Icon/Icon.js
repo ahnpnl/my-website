@@ -1,12 +1,10 @@
 // @flow
 
-import PropTypes from 'prop-types'
 import React from 'react'
+import PropTypes from 'prop-types'
 
 type IconProps = {
   name: string,
-  className?: string,
-  fixedSize?: string,
 }
 
 /**
@@ -14,11 +12,11 @@ type IconProps = {
  * in assets/img/icons/.
  */
 
-const Icon = ({ name, className, fixedSize }: IconProps) => {
+const Icon = ({ name }: IconProps) => {
   // We need require since this is a dynamic import :(
   require(`../../../assets/img/icons/${name}.svg`)
   return (
-    <svg aria-labelledby={`icon-${name}-title`} className={className} role="img" key={name}>
+    <svg aria-labelledby={`icon__${name}-title`} role="img" key={name}>
       <title>{name}</title>
       <use pointerEvents="none" xlinkHref={`#icons-${name}`} />
     </svg>
@@ -26,9 +24,11 @@ const Icon = ({ name, className, fixedSize }: IconProps) => {
 }
 
 Icon.propTypes = {
+  /**
+   * String indicates icon file name
+   */
   name: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  fixedSize: PropTypes.string,
 }
 
 export default Icon
+
