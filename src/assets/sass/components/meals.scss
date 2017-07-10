@@ -1,8 +1,7 @@
 @lost clearing both;
 @lost rounder 99.9;
 .meals {
-  lost-center: 100% map_get($base, 'unit') flex;
-  padding: map_get($base, 'unit') 0;
+  lost-center: 100% 0 flex;
   .meal__photo {
     lost-row: 1/4 0 0;
     overflow: hidden;
