@@ -79,8 +79,8 @@
     "lint": "eslint src",
     "flow:check": "flow check",
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -x 'src/**/*.spec.js' -t html -o 'coverage/flow-report'",
-    "precommit": "yarn run lint",
-    "prepush": "CI=true yarn run test && yarn run flow:check",
+    "precommit": "yarn run lint && yarn run test && yarn run flow:check",
+    "prepush": "yarn run test && yarn run flow:check",
     "sassdoc": "sassdoc 'src/assets/sass/*'"
   },
   "jest": {
