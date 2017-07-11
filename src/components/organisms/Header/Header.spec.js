@@ -1,6 +1,5 @@
 import React from 'react'
 import { mount, shallow } from 'enzyme'
-import { shallowToJson } from 'enzyme-to-json'
 import Header from './Header'
 
 describe('Header components', () => {
@@ -11,10 +10,9 @@ describe('Header components', () => {
       }
     }
 
-    const component = shallow(
+    const result = shallow(
       <Header deviceInfo={deviceInfo} isOpen={false} setOpenState={() => {}} />
     )
-    const result = shallowToJson(component)
 
     expect(result).toMatchSnapshot()
   })
@@ -26,10 +24,9 @@ describe('Header components', () => {
       }
     }
 
-    const component = shallow(
+    const result = shallow(
       <Header deviceInfo={deviceInfo} isOpen={false} setOpenState={() => {}} />
     )
-    const result = shallowToJson(component)
 
     expect(result).toMatchSnapshot()
   })

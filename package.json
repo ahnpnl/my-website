@@ -93,6 +93,7 @@
       "!src/_mocks_/*.js",
       "!src/assets/*.*"
     ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],

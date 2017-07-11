@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { shallowToJson } from 'enzyme-to-json'
 
 import Meals from './Meals'
 
@@ -49,11 +48,9 @@ describe('Meals component', () => {
       },
     ]
 
-    const component = shallow(
+    const result = shallow(
       <Meals mealItems={mealItems} />
     )
-
-    const result = shallowToJson(component)
 
     expect(result).toMatchSnapshot()
   })
