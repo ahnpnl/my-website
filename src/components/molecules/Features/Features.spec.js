@@ -1,6 +1,9 @@
 import React from 'react'
-import Features from './Features'
+
 import { shallow } from 'enzyme'
+import { shallowToJson } from 'enzyme-to-json'
+
+import Features from './Features'
 
 describe('Features component', () => {
   it('renders correctly without issues', () => {
@@ -27,9 +30,11 @@ describe('Features component', () => {
       },
     ]
 
-    const result = shallow(
+    const component = shallow(
       <Features featureItems={featureItems} />
     )
+
+    const result = shallowToJson(component)
 
     expect(result).toMatchSnapshot()
   })

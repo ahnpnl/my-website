@@ -14,7 +14,7 @@ const Steps = () => (
     </div>
     <div className="steps__description">
       <div className="steps__image">
-        <img src="https://drive.google.com/uc?id=0BwwULdUQlf8mVkFjdkw4OVpfRVk" alt="Omnifood app on iPhone" />
+        <img src="https://lh6.googleusercontent.com/CZHrY4sPHrtka5iLVGyQYDMK3JSUYakzUDUv4EC6GEpYqeBZMaygcg" alt="Omnifood app on iPhone" />
       </div>
       <div className="steps__items">
         <div className="steps__item">

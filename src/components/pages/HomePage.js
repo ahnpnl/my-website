@@ -5,6 +5,7 @@ import Features from '../../containers/Features'
 import Hero from '../molecules/Hero/Hero'
 import Meals from '../../containers/Meals'
 import Steps from '../molecules/Steps/Steps'
+import Cities from '../molecules/Cities/Cities'
 
 /**
  * Homepage component displays home page
@@ -15,6 +16,7 @@ const HomePage = () => (
     <Features />
     <Meals />
     <Steps />
+    <Cities />
   </div>
 )
 

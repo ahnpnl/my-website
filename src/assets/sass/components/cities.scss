@@ -1,0 +1,53 @@
+.cities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cities__intro {
+  @extend .cities;
+  padding: map_get($base, 'unit');
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+
+    &:after {
+      display: block;
+      height: 2px;
+      background-color: #e67e22;
+      content: " ";
+      width: 100px;
+      margin: 0 auto;
+      margin-top: map_get($base, 'unit');
+    }
+  }
+}
+
+@lost clearing both;
+@lost rounder 99.9;
+.cities__specs {
+  lost-center: 100% map_get($base, 'unit') flex;
+  .cities__features {
+    lost-row: 1/4 map_get($base, 'unit');
+  }
+
+  @include mq(nth($medium-up, 1)) {
+    .cities__features {
+      lost-column: 1/4 0 map_get($base, 'unit');
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+.cities__feature {
+  @include mq(nth($small-only, 1)) {
+    font-size: 70%;
+  }
+}

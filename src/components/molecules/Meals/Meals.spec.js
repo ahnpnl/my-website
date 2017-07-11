@@ -1,6 +1,8 @@
 import React from 'react'
-import Meals from './Meals'
 import { shallow } from 'enzyme'
+import { shallowToJson } from 'enzyme-to-json'
+
+import Meals from './Meals'
 
 describe('Meals component', () => {
   it('renders correctly without issues', () => {
@@ -47,9 +49,11 @@ describe('Meals component', () => {
       },
     ]
 
-    const result = shallow(
+    const component = shallow(
       <Meals mealItems={mealItems} />
     )
+
+    const result = shallowToJson(component)
 
     expect(result).toMatchSnapshot()
   })

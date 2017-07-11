@@ -1,5 +1,5 @@
 #### Button examples
     
     <div>
-      <Button appearance="secondary" text="Show me more" onClick={() => {}} />
+      <Button appearance="primary" text="Show me more" onClick={() => {}} />
     </div>

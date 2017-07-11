@@ -3,6 +3,7 @@
 # sass generated document
 /public/stylesheets
 /.sasscache
+/sass
 
 # dependencies
 /node_modules

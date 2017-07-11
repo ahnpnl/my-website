@@ -2,6 +2,7 @@
 
 const path = require('path')
 
+
 module.exports = {
   webpackConfig: Object.assign({},
     require('./config/webpack.config.dev')
@@ -14,4 +15,7 @@ module.exports = {
     },
   },
   components: 'src/components/**/*.js',
+  require: [
+    path.join(__dirname, 'src/assets/sass/main.scss')
+  ]
 }

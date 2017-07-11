@@ -26,6 +26,7 @@
     "cssnano": "^3.10.0",
     "dotenv": "4.0.0",
     "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
     "eslint": "3.19.0",
     "eslint-config-react-app": "^1.0.4",
     "eslint-loader": "1.7.1",
@@ -79,9 +80,10 @@
     "lint": "eslint src",
     "flow:check": "flow check",
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -x 'src/**/*.spec.js' -t html -o 'coverage/flow-report'",
-    "precommit": "yarn run lint && yarn run test && yarn run flow:check",
-    "prepush": "yarn run test && yarn run flow:check",
-    "sassdoc": "sassdoc 'src/assets/sass/*'"
+    "precommit": "yarn run lint && yarn run flow:check",
+    "prepush": "yarn run test",
+    "sassdoc": "sassdoc 'src/assets/sass/*'",
+    "css:watch": "node-sass src/assets/sass/main.scss sass/index.css -w"
   },
   "jest": {
     "collectCoverageFrom": [
