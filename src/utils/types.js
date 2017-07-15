@@ -34,7 +34,7 @@ type InfoType = {
 type CityType = {
   id: number,
   cityImageURL: string,
-  name: string
+  name: string,
   nbrOfEaters: string,
   nbrOfChefs: string,
   twitter: string
