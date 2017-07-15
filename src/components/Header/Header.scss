@@ -20,12 +20,12 @@ header {
   }
 
   .header__top {
-    height: 50px;
+    height: 60px;
     background-color: map_get($colors, 'trout');
     color: map_get($colors, 'pureWhite');
 
     @include mq(nth($medium-up, 1)) {
-      height: 70px;
+      height: 80px;
     }
 
     .top__wrapper {
@@ -55,24 +55,22 @@ header {
 }
 
 .nav__link {
-  color: map_get($colors, 'aquaHaze');
+  color: map_get($colors, tahitiGold);
   text-transform: uppercase;
   font-size: 90%;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.2s;
-
-  @include mq(nth($small-only, 1)) {
-    border: none;
-    color: map_get($colors, tahitiGold);
-  }
 
   @include on-event {
-    color: map_get($colors, 'aquaHaze');
-    border-bottom: 2px solid #e67e22;
+    border-bottom: none;
+  }
 
-    @include mq(nth($small-only, 1)) {
-      color: map_get($colors, tahitiGold);
-      border: none;
+  @include mq(nth($medium-up, 1)) {
+    color: map_get($colors, mischka);
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+
+    @include on-event {
+      color: map_get($colors, pureWhite);
+      border-bottom: 2px solid map_get($colors, tahitiGold);
     }
   }
 }
