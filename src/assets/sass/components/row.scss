@@ -1,9 +1,0 @@
-.row {
-  &:after {
-    clear: both;
-    content: '""';
-    display: table;
-  }
-
-  margin-bottom: map_get($base, 'unit');
-}

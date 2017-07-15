@@ -2,6 +2,12 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+@mixin clearFix () {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 /// Add `&hover`, `&active`, `&focus` when styling a link
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -52,20 +58,6 @@
   } @else {
     @content;
   }
-}
-
-/// Box-sizing helper
-/// @param {String} $type - Either `border-box`, `padding-box` or `content-box`
-/// @example scss - Usage
-/// .foo {
-///   @include box-sizing(border-box);
-/// }
-/// @example css - Result
-/// .foo {
-///   box-sizing: border-box;
-/// }
-@mixin box-sizing($type) {
-  box-sizing: $type;
 }
 
 /// Set background image with .svg and fallback

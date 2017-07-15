@@ -1,0 +1,18 @@
+.header__wrapper {
+  @include clearFix();
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: map_get($zIndex, fixedFloating);
+}
+
+header {
+  position: relative;
+  width: 100%;
+  z-index: map_get($zIndex, hoverActiveFocus);
+
+  .row {
+    margin-bottom: 0;
+  }
+}

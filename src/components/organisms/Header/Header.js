@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 import Icon from '../../atoms/Icon/Icon'
 import type { DeviceInfo } from '../../../utils/types'
+import Row from '../../atoms/Row/Row'
 
 type HeaderArguments = {
   deviceInfo: DeviceInfo,
@@ -17,7 +18,12 @@ type HeaderArguments = {
  */
 const Header = ({ deviceInfo, isOpen, setOpenState } : HeaderArguments) => {
   return (
-    <header>
+    <div className="header__wrapper">
+      <header>
+        <Row>
+
+        </Row>
+      </header>
       <nav>
         <div className="logo">
           <img src={require('../../../assets/img/logo-white.png')} alt="Omnifood logo" className="logo" />
@@ -26,7 +32,7 @@ const Header = ({ deviceInfo, isOpen, setOpenState } : HeaderArguments) => {
           ? renderCompactMenu(isOpen, setOpenState)
           : renderNormalNavigation()}
       </nav>
-    </header>
+    </div>
   )
 }
 

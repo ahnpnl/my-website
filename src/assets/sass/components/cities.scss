@@ -46,8 +46,12 @@
   }
 }
 
-.cities__feature {
+.city__feature {
   @include mq(nth($small-only, 1)) {
-    font-size: 70%;
+    font-size: 85%;
+  }
+
+  svg {
+    fill: map_get($colors, 'tahitiGold')
   }
 }

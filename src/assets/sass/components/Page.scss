@@ -1,0 +1,4 @@
+.page {
+  display: block;
+  @include stepScale('margin-top', 100px, 111px, 111px);
+}
