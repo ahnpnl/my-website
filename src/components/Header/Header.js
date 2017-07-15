@@ -25,17 +25,13 @@ const Header = ({ deviceInfo, isOpen, setOpenState }: HeaderArguments) => {
   return (
     <div className="header__wrapper">
       <header>
-        <div className="header__top">
-          <div className="top__wrapper">
-            <div className="header__logo">
-              <img src={require('../../assets/img/logo-white.png')} alt="Omnifood logo" className="logo" />
-            </div>
-            {!deviceInfo.deviceType.isSmall
-              ? renderNormalNavigation()
-              : renderCompactMenu(isOpen, setOpenState)
-            }
-          </div>
+        <div className="header__logo">
+          <img src={require('../../assets/img/logo-white.png')} alt="Omnifood logo" className="logo" />
         </div>
+        {!deviceInfo.deviceType.isSmall
+          ? renderNormalNavigation()
+          : renderCompactMenu(isOpen, setOpenState)
+        }
       </header>
     </div>
   )

@@ -8,34 +8,22 @@
   left: 0;
   width: 100%;
   z-index: map_get($zIndex, fixedFloating);
-}
 
-header {
-  position: relative;
-  width: 100%;
-  z-index: map_get($zIndex, hoverActiveFocus);
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-  .row {
-    margin-bottom: 0;
-  }
-
-  .header__top {
     height: 60px;
     background-color: map_get($colors, 'trout');
     color: map_get($colors, 'pureWhite');
 
+    @include stepScale('padding-left', 8px, map_get($base, 'unit'), map_get($base, 'unit'));
+    @include stepScale('padding-right', 8px, map_get($base, 'unit'), map_get($base, 'unit'));
+
     @include mq(nth($medium-up, 1)) {
       height: 80px;
-    }
-
-    .top__wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      @include stepScale('padding-left', 8px, map_get($base, 'unit'), map_get($base, 'unit'));
-      @include stepScale('padding-right', 8px, map_get($base, 'unit'), map_get($base, 'unit'));
-      height: 100%;
     }
   }
 }

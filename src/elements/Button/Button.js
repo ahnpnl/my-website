@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 
 import Icon from '../Icon/Icon'
 
+import './Button.scss'
+
 type ButtonProps = {
   appearance?: 'primary' | 'secondary' | 'success' | 'error' | 'close',
   hasDropdown?: boolean,

@@ -9,6 +9,8 @@ import './App.scss'
 const App = () => (
   <div className="app__container">
     <Header />
+    <HomePage />
+    <Footer />
   </div>
 )
 

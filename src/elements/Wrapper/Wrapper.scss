@@ -1,0 +1,10 @@
+@import '../../assets/sass/abstracts/mixins';
+@import '../../assets/sass/abstracts/variables';
+
+.wrapper {
+  margin: 0 auto;
+  @include stepScale('padding-left', 0px, 0px, map_get($base, unit));
+  @include stepScale('padding-right', 0px, 0px, map_get($base, unit));
+  width: auto;
+  max-width: $DEVICE_LARGE_UPPER_BOUND;
+}

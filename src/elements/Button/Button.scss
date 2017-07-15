@@ -1,3 +1,7 @@
+@import '../../assets/sass/abstracts/functions';
+@import '../../assets/sass/abstracts/variables';
+@import '../../assets/sass/abstracts/mixins';
+
 %baseButton {
   display: flex;
   appearance: none;

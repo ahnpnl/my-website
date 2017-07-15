@@ -2,6 +2,8 @@
 
 import React from 'react'
 
+import './Page.scss'
+
 type Arguments = {
   /**
    * The elements that are shown inside the slider. Each element should be wrapped inside a SliderItem component, for alignment.
