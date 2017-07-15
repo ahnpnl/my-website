@@ -5,12 +5,13 @@ import Button from '../../elements/Button/Button'
 
 import './Hero.scss'
 import Wrapper from '../../elements/Wrapper/Wrapper'
+import Row from '../../elements/Row/Row'
 
 /**
  * Hero component displays the hero with image background and 2 buttons
  */
 const Hero = () => (
-  <section className="hero">
+  <Row className="hero">
     <Wrapper>
       <div className="panel">
         <div className="hero__background">
@@ -24,7 +25,7 @@ const Hero = () => (
         </div>
       </div>
     </Wrapper>
-  </section>
+  </Row>
 )
 
 export default Hero

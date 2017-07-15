@@ -1,15 +1,16 @@
 // @flow
 
 import React from 'react'
+import './Row.scss'
 
 type RowArguments = {
   children?: React.Element<any>[],
 }
 
-const Row = ({ children }: RowArguments) => (
-  <div className="row">
+const Row = ({ className, children }: RowArguments) => (
+  <section className={className}>
     {children}
-  </div>
+  </section>
 )
 
 export default Row
