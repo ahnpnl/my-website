@@ -36,7 +36,7 @@
 @lost clearing both;
 @lost rounder 99.9;
 .features__specs {
-  lost-center: 100% map_get($base, 'unit') flex;
+  lost-center: 100% 0 flex;
   .info {
     lost-row: 1/4 0 map_get($base, 'unit');
   }

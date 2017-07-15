@@ -1,6 +1,9 @@
+@import '../../assets/sass/abstracts/variables';
+@import '../../assets/sass/abstracts/mixins';
+
 @lost clearing both;
 @lost rounder 99.9;
-.meals {
+.wrapper__meals {
   lost-center: 100% 0 flex;
   .meal__photo {
     lost-row: 1/4 0 0;
@@ -9,6 +12,7 @@
   }
 
   @include mq(nth($medium-up, 1)) {
+    padding: 0 map_get($base, unit);
     .meal__photo {
       lost-column: 1/4 0 0;
     }
