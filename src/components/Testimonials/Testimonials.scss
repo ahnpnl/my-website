@@ -1,0 +1,98 @@
+@import '../../assets/sass/abstracts/variables';
+@import '../../assets/sass/abstracts/mixins';
+
+.wrapper__testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: map_get($colors, pureWhite);
+
+  .testimonials__background {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: map_get($base, 'unit') 0;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://lh5.googleusercontent.com/STDpIdel6vnqWYGR9BiEuDn3PznIj1bn18K6tSzQVsTQVDXKhnqRPA');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @include mq(nth($medium-up, 1)) {
+      height: 500px;
+    }
+  }
+
+  @include mq(nth($medium-up, 1)) {
+    padding: 0 map_get($base, unit);
+  }
+
+  .testimonials__intro {
+    margin-bottom: map_get($base, unit);
+
+    h2 {
+      text-align: center;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+
+      &:after {
+        display: block;
+        height: 2px;
+        background-color: map_get($colors, tahitiGold);
+        content: " ";
+        width: 100px;
+        margin: 0 auto;
+        margin-top: map_get($base, 'unit');
+      }
+    }
+  }
+
+  @lost clearing both;
+  @lost rounder 99.9;
+  .testimonials__body {
+    lost-center: 100% 0 flex;
+    .testimonial__quote {
+      lost-row: 1/3 map_get($base, 'unit');
+    }
+
+    @include mq(nth($medium-up, 1)) {
+      padding: 0 map_get($base, 'unit');
+      .testimonial__quote {
+        lost-column: 1/3 0 map_get($base, 'unit');
+      }
+    }
+  }
+}
+
+blockquote {
+  position: relative;
+  font-style: italic;
+  line-height: 145%;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+

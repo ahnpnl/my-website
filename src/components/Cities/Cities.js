@@ -5,6 +5,10 @@ import Row from '../../elements/Row/Row'
 
 import './Cities.scss'
 
+/**
+ * Cities component displays list of cities with a picture, city name,
+ * number of eaters, number of chefs and twitter link
+ */
 const Cities = ({ cityItems }) => (
   <Row className="cities">
     <Wrapper name="cities">

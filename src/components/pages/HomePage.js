@@ -7,6 +7,7 @@ import Meals from '../../containers/Meals'
 import Steps from '../Steps/Steps'
 import Cities from '../../containers/Cities'
 import Page from '../../elements/Page/Page'
+import Testimonials from '../../containers/Testimonials'
 
 /**
  * Homepage component displays home page
@@ -18,6 +19,7 @@ const HomePage = () => (
     <Meals />
     <Steps />
     <Cities />
+    <Testimonials />
   </Page>
 )
 

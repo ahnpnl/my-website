@@ -40,6 +40,13 @@ type CityType = {
   twitter: string
 }
 
+type TestimonialType = {
+  id: number,
+  imageURL: string,
+  customerName: string,
+  text: string
+}
+
 export type MediaObjectItemType = InfoType & ImageType
 
 export type FeaturesType = {
@@ -52,4 +59,8 @@ export type MealsType = {
 
 export type CitiesType = {
   cityItems: Array<CityType>
+}
+
+export type TestimonialsType = {
+  testimonialItems: Array<TestimonialType>
 }
