@@ -1,0 +1,36 @@
+{
+  "cityItems": [
+    {
+      "id": 1,
+      "cityImageURL": "https://lh4.googleusercontent.com/PdKlSTipBojRngRyozz25bNcjSXDgpoPEjX0_6GRcZpz58aJMjklJg",
+      "name": "Lisbon",
+      "nbrOfEaters": "1600+ happy eaters",
+      "nbrOfChefs": "60+ top chefs",
+      "twitter": "@omnifood_lx"
+    },
+    {
+      "id": 2,
+      "cityImageURL": "https://lh3.googleusercontent.com/lDQGvYX2seloj1UDjLnE1ooiOP-5DjUOIMvRtb3aOShF-nG_OpZWcw",
+      "name": "San Francisco",
+      "nbrOfEaters": "3700+ happy eaters",
+      "nbrOfChefs": "160+ top chefs",
+      "twitter": "@omnifood_sf"
+    },
+    {
+      "id": 3,
+      "cityImageURL": "https://lh5.googleusercontent.com/HWe5CSBiGeieGvPoUsxUrcJO2hKeZILpn9CcM0WkcFps7C5Rp7LrTA",
+      "name": "Berlin",
+      "nbrOfEaters": "2300+ happy eaters",
+      "nbrOfChefs": "110+ top chefs",
+      "twitter": "@omnifood_berlin"
+    },
+    {
+      "id": 4,
+      "cityImageURL": "https://lh4.googleusercontent.com/IzAVIrEBuvthQbp2kFZMCz9c95jr593I650s81GuaWf2MFiGy3utjQ",
+      "name": "London",
+      "nbrOfEaters": "1200+ happy eaters",
+      "nbrOfChefs": "50+ top chefs",
+      "twitter": "@omnifood_london"
+    }
+  ]
+}

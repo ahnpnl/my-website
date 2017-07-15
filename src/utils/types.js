@@ -31,6 +31,15 @@ type InfoType = {
   text: string,
 }
 
+type CityType = {
+  id: number,
+  cityImageURL: string,
+  name: string
+  nbrOfEaters: string,
+  nbrOfChefs: string,
+  twitter: string
+}
+
 export type MediaObjectItemType = InfoType & ImageType
 
 export type FeaturesType = {
@@ -39,4 +48,8 @@ export type FeaturesType = {
 
 export type MealsType = {
   mealItems: Array<ImageType>
+}
+
+export type CitiesType = {
+  cityItems: Array<CityType>
 }

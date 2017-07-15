@@ -5,7 +5,7 @@ import Features from '../../containers/Features'
 import Hero from '../Hero/Hero'
 import Meals from '../../containers/Meals'
 import Steps from '../Steps/Steps'
-import Cities from '../Cities/Cities'
+import Cities from '../../containers/Cities'
 import Page from '../../elements/Page/Page'
 
 /**
