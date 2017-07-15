@@ -1,56 +1,65 @@
-.steps {
+@import '../../assets/sass/abstracts/functions';
+@import '../../assets/sass/abstracts/variables';
+@import '../../assets/sass/abstracts/mixins';
+
+.wrapper__steps {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.steps__intro {
-  @extend .steps;
-  padding: map_get($base, 'unit');
+  @include mq(nth($medium-up, 1)) {
+    padding: 0 map_get($base, unit);
+  }
 
-  h2 {
-    text-transform: uppercase;
-    text-align: center;
-    word-spacing: 2px;
-    letter-spacing: 1px;
+  .steps__intro {
+    @extend .wrapper__steps;
+    padding: 0;
 
-    &:after {
-      display: block;
-      height: 2px;
-      background-color: #e67e22;
-      content: " ";
-      width: 100px;
-      margin: 0 auto;
-      margin-top: map_get($base, 'unit');
+    h2 {
+      text-align: center;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+
+      &:after {
+        display: block;
+        height: 2px;
+        background-color: map_get($colors, tahitiGold);
+        content: " ";
+        width: 100px;
+        margin: 0 auto;
+        margin-top: map_get($base, unit);
+      }
+    }
+  }
+
+  .steps__description {
+    @extend .wrapper__steps;
+    padding: 0;
+
+    @include mq(nth($medium-up, 1)) {
+      flex-direction: row;
+    }
+
+    .steps__image {
+      width: 40%;
+      margin-bottom: map_get($base, 'unit');
+
+      @include mq(nth($medium-only, 1)) {
+        width: 25%;
+      }
+
+      @include mq(nth($large-up, 1)) {
+        width: 20%;
+      }
     }
   }
 }
 
-.steps__description {
-  @extend .steps;
-  padding: 0 map_get($base, 'unit');
-
-  @include mq(nth($medium-up, 1)) {
-    flex-direction: row;
-  }
-}
-
-.steps__image {
-  width: 40%;
-  margin-bottom: map_get($base, 'unit');
-
-  @include mq(nth($medium-only, 1)) {
-    width: 25%;
-  }
-
-  @include mq(nth($large-up, 1)) {
-    width: 20%;
-  }
-}
-
 .steps__items {
-  @extend .steps;
+  @extend .wrapper__steps;
+  padding: 0;
+
   align-items: flex-start;
   @include mq(nth($medium-up, 1)) {
     margin-left: map_get($base, 'unit');
@@ -60,6 +69,7 @@
     display: flex;
     align-items: center;
     margin-bottom: map_get($base, 'unit');
+
     p {
       margin-bottom: 0;
     }
@@ -98,3 +108,5 @@
     }
   }
 }
+
+
