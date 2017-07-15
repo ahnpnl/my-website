@@ -7,6 +7,8 @@ import Icon from '../../elements/Icon/Icon'
 import type { DeviceInfo } from '../../utils/types'
 import Row from '../../elements/Row/Row'
 
+import './Header.scss'
+
 type HeaderArguments = {
   deviceInfo: DeviceInfo,
   isOpen: boolean,
@@ -21,17 +23,21 @@ const Header = ({ deviceInfo, isOpen, setOpenState } : HeaderArguments) => {
     <div className="header__wrapper">
       <header>
         <Row>
-
+          <div className="header__top">
+            <div className="top__wrapper">
+              <div className="header__logo">
+                <img src={require('../../assets/img/logo-white.png')} alt="Omnifood logo" className="logo" />
+              </div>
+              <nav className="nav__links">
+                <a className="nav__link" href="#features">Food delivery</a>
+                <a className="nav__link" href="#works">How it works</a>
+                <a className="nav__link" href="#cities">Our cities</a>
+                <a className="nav__link" href="#plans">Sign up</a>
+              </nav>
+            </div>
+          </div>
         </Row>
       </header>
-      <nav>
-        <div className="logo">
-          <img src={require('../../assets/img/logo-white.png')} alt="Omnifood logo" className="logo" />
-        </div>
-        {deviceInfo.deviceType.isSmall
-          ? renderCompactMenu(isOpen, setOpenState)
-          : renderNormalNavigation()}
-      </nav>
     </div>
   )
 }

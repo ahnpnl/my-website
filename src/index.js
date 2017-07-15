@@ -6,6 +6,8 @@ import App from './components/App'
 import store from './store'
 import * as DeviceInfoModule from './modules/deviceInfo'
 
+import './assets/sass/index.scss'
+
 window.___store = store
 
 // global event handlers

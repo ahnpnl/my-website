@@ -14,7 +14,7 @@ type IconProps = {
 
 const Icon = ({ name }: IconProps) => {
   // We need require since this is a dynamic import :(
-  require(`../../../assets/img/icons/${name}.svg`)
+  require(`../../assets/img/icons/${name}.svg`)
   return (
     <svg aria-labelledby={`icon__${name}-title`} role="img" key={name}>
       <title>{name}</title>

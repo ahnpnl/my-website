@@ -16,6 +16,6 @@ module.exports = {
   },
   components: 'src/components/**/*.js',
   require: [
-    path.join(__dirname, 'src/assets/sass/main.scss')
+    path.join(__dirname, 'src/assets/sass/index.scss')
   ]
 }
