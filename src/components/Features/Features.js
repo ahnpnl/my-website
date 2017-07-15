@@ -1,9 +1,9 @@
 // @flow
 
 import React from 'react'
-import CustomPropTypes from '../../../utils/CustomPropTypes'
-import type { FeaturesType } from '../../../utils/types'
-import InfoItem from '../../atoms/InfoItem/InfoItem'
+import CustomPropTypes from '../../utils/CustomPropTypes'
+import type { FeaturesType } from '../../utils/types'
+import InfoItem from '../../elements/InfoItem/InfoItem'
 
 /**
  * Feature component displays a title, an introduction and 4 feature items

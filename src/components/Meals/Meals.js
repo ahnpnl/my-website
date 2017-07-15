@@ -2,8 +2,8 @@
 
 import React from 'react'
 
-import type { MealsType } from '../../../utils/types'
-import CustomPropTypes from '../../../utils/CustomPropTypes'
+import type { MealsType } from '../../utils/types'
+import CustomPropTypes from '../../utils/CustomPropTypes'
 
 /**
  * Meals component displays images of food

@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../../atoms/Icon/Icon'
+import Icon from '../../elements/Icon/Icon'
 
 const Cities = () => (
   <section className="cities">

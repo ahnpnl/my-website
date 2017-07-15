@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Header from '../components/organisms/Header/Header'
+import Header from '../components/Header/Header'
 import { setOpenState } from '../modules/header'
 import type { DeviceInfo, Dispatcher } from '../utils/types'
 

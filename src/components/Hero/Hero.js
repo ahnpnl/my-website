@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import Button from '../../atoms/Button/Button'
+import Button from '../../elements/Button/Button'
 
 /**
  * Hero component displays the hero with image background and 2 buttons

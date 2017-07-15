@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import Icon from '../../atoms/Icon/Icon'
+import Icon from '../../elements/Icon/Icon'
 
 /**
  * Steps component displays an image, some text blocks and 2 icons

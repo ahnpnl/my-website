@@ -1,7 +1,7 @@
 // @flow
 
 import { connect } from 'react-redux'
-import Meals from '../components/molecules/Meals/Meals'
+import Meals from '../components/Meals/Meals'
 import type { MealsType } from '../utils/types'
 
 type MealsState = {

@@ -2,11 +2,11 @@
 
 import React from 'react'
 import Features from '../../containers/Features'
-import Hero from '../molecules/Hero/Hero'
+import Hero from '../Hero/Hero'
 import Meals from '../../containers/Meals'
-import Steps from '../molecules/Steps/Steps'
-import Cities from '../molecules/Cities/Cities'
-import Page from '../atoms/Page/Page'
+import Steps from '../Steps/Steps'
+import Cities from '../Cities/Cities'
+import Page from '../elements/Page/Page'
 
 /**
  * Homepage component displays home page

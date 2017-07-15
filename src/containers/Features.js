@@ -1,7 +1,7 @@
 // @flow
 
 import { connect } from 'react-redux'
-import Features from '../components/molecules/Features/Features'
+import Features from '../components/Features/Features'
 import type { FeaturesType } from '../utils/types'
 
 type FeaturesState = {

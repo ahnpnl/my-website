@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Footer from './organisms/Footer/Footer'
+import Footer from './Footer/Footer'
 import Header from '../containers/Header'
 import HomePage from './pages/HomePage'
 
