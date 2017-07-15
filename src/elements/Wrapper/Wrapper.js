@@ -8,10 +8,19 @@ type WrapperArguments = {
   children?: React.Element<any>[],
 }
 
-const Wrapper = ({ className, children }: WrapperArguments) => (
-  <div className="wrapper">
-    {children}
-  </div>
-)
+const Wrapper = ({ name, children }: WrapperArguments) => {
+  let className = 'wrapper'
+  if (name !== undefined) {
+    className = className + '__' + name;
+  }
+
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  )
+}
+
+
 
 export default Wrapper

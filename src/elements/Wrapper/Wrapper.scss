@@ -8,3 +8,11 @@
   width: auto;
   max-width: $DEVICE_LARGE_UPPER_BOUND;
 }
+
+.wrapper__features {
+  @extend .wrapper;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
