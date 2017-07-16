@@ -54,8 +54,31 @@
   @lost rounder 99.9;
   .testimonials__body {
     lost-center: 100% 0 flex;
+
     .testimonial__quote {
       lost-row: 1/3 map_get($base, 'unit');
+
+      blockquote {
+        position: relative;
+        font-style: italic;
+        line-height: 145%;
+        padding: map_get($base, spacer);
+
+        @include stepScale('font-size', 85%, 100%, 100%);
+      }
+
+      blockquote:before {
+        content: "\201C";
+        font-size: 400%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -5px;
+
+        @include mq(nth($medium-up, 1)) {
+          font-size: 500%;
+        }
+      }
     }
 
     @include mq(nth($medium-up, 1)) {
@@ -67,32 +90,17 @@
   }
 }
 
-blockquote {
-  position: relative;
-  font-style: italic;
-  line-height: 145%;
-}
-
-blockquote:before {
-  content: "\201C";
-  font-size: 400%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -5px;
-}
-
 cite {
   font-size: 90%;
-  margin-top: 25px;
+  margin-top: map_get($base, spacer);
   display: block;
-}
 
-cite img {
-  height: 45px;
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
+  img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: map_get($base, spacer);
+    vertical-align: middle;
+  }
 }
 
 

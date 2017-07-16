@@ -15,7 +15,7 @@ const Cities = ({ cityItems }) => (
       <div className="cities__intro">
         <h2>We're currently in these cities</h2>
       </div>
-      <div className="cities__specs">
+      <div className="cities__body">
         {cityItems.map(city =>
           <div key={city.id} className="cities__features">
             <img src={city.cityImageURL} alt={city.name} />

@@ -47,6 +47,19 @@ type TestimonialType = {
   text: string
 }
 
+type PlanFeatureType = {
+  id: number,
+  description: string
+}
+
+type PlanType = {
+  id: number,
+  title: string,
+  price: string,
+  priceDetail?: string,
+  features: Array<PlanFeatureType>
+}
+
 export type MediaObjectItemType = InfoType & ImageType
 
 export type FeaturesType = {
@@ -63,4 +76,8 @@ export type CitiesType = {
 
 export type TestimonialsType = {
   testimonialItems: Array<TestimonialType>
+}
+
+export type PlansType = {
+  planItems: Array<PlanType>
 }

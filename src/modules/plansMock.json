@@ -1,0 +1,71 @@
+{
+  "planItems": [
+    {
+      "id": 1,
+      "title": "Premium",
+      "price": "$399/month",
+      "priceDetail": "That's only 13.30$ per meal",
+      "features": [
+        {
+          "id": 1,
+          "description": "1 meal every day"
+        },
+        {
+          "id": 2,
+          "description": "Order 24/7"
+        },
+        {
+          "id": 3,
+          "description": "Access to newest creations"
+        },
+        {
+          "id": 4,
+          "description": "Free delivery"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Pro",
+      "price": "$149/month",
+      "priceDetail": "That's only 14.90$ per meal",
+      "features": [
+        {
+          "id": 1,
+          "description": "1 meal 10 days/month"
+        },
+        {
+          "id": 2,
+          "description": "Order 24/7"
+        },
+        {
+          "id": 3,
+          "description": "Access to newest creations"
+        },
+        {
+          "id": 4,
+          "description": "Free delivery"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Starter",
+      "price": "19$/month",
+      "features": [
+        {
+          "id": 1,
+          "description": "1 meal"
+        },
+        {
+          "id": 2,
+          "description": "Order from 8 am to 12 pm"
+        },
+        {
+          "id": 3,
+          "description": "Free delivery"
+        }
+      ]
+    }
+  ]
+}

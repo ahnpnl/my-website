@@ -5,6 +5,7 @@ import header from './modules/header'
 import meals from './modules/meals'
 import cities from './modules/cities'
 import testimonials from './modules/testimonials'
+import plans from './modules/plans'
 
 const reducers = combineReducers({
   cities,
@@ -12,6 +13,7 @@ const reducers = combineReducers({
   features,
   header,
   meals,
+  plans,
   testimonials,
 })
 

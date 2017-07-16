@@ -8,6 +8,7 @@ import Steps from '../Steps/Steps'
 import Cities from '../../containers/Cities'
 import Page from '../../elements/Page/Page'
 import Testimonials from '../../containers/Testimonials'
+import Plans from '../../containers/Plans'
 
 /**
  * Homepage component displays home page
@@ -20,6 +21,7 @@ const HomePage = () => (
     <Steps />
     <Cities />
     <Testimonials />
+    <Plans />
   </Page>
 )
 

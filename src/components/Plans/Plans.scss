@@ -1,0 +1,116 @@
+@import '../../assets/sass/abstracts/variables';
+@import '../../assets/sass/abstracts/mixins';
+@import '../../assets/sass/abstracts/functions';
+
+.wrapper__plans {
+  background-color: map_get($colors, aquaHaze);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(nth($medium-up, 1)) {
+    padding: 0 map_get($base, unit);
+  }
+
+  .plans__intro {
+    @extend .wrapper__plans;
+    padding: 0;
+
+    h2 {
+      text-align: center;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+
+      &:after {
+        display: block;
+        height: 2px;
+        background-color: map_get($colors, tahitiGold);
+        content: " ";
+        width: 100px;
+        margin: 0 auto;
+        margin-top: map_get($base, 'unit');
+      }
+    }
+  }
+
+  @lost clearing both;
+  @lost rounder 99.9;
+  .plans__body {
+    lost-center: 100% 0 flex;
+    justify-content: space-between;
+
+    .plans__box {
+      lost-row: 1/3 map_get($base, 'unit');
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 2px #efefef;
+    }
+
+    @include mq(nth($medium-up, 1)) {
+      .plans__box {
+        lost-column: 1/3 0 map_get($base, 'unit');
+        height: 351px;
+      }
+    }
+  }
+}
+
+.box__header {
+  flex: 1 0 auto;
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  .price {
+    font-size: 120%;
+    color: map_get($colors, tahitiGold);
+  }
+
+  border-bottom: 1px solid #e8e8e8;
+  padding: map_get($base, spacer) 0 0 map_get($base, spacer);
+}
+
+.box__body {
+  flex: 2 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: map_get($base, unit);
+  border-bottom: 1px solid #e8e8e8;
+  @include mq(nth($small-only, 1), nth($small-only, 2)) {
+    font-size: 85%;
+  }
+
+  svg {
+    fill: map_get($colors, malachite);
+    margin-right: map_get($base, spacer);
+
+    @include stepScale('width', map-deep-get($base, 'icon', 'small'), map-deep-get($base, 'icon', 'small'));
+    @include stepScale('height', map-deep-get($base, 'icon', 'small'), map-deep-get($base, 'icon', 'small'));
+  }
+
+  .box__body__item {
+    display: flex;
+    align-items: center ;
+    @include mq(nth($medium-up, 1)) {
+      font-size: 90%;
+    }
+  }
+}
+
+.box__footer {
+  flex: 1 0 auto;
+  padding: map_get($base, spacer) 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
