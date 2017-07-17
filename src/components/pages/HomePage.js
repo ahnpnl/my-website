@@ -9,6 +9,7 @@ import Cities from '../../containers/Cities'
 import Page from '../../elements/Page/Page'
 import Testimonials from '../../containers/Testimonials'
 import Plans from '../../containers/Plans'
+import ContactForm from '../ContactForm/ContactForm'
 
 /**
  * Homepage component displays home page
@@ -22,6 +23,7 @@ const HomePage = () => (
     <Cities />
     <Testimonials />
     <Plans />
+    <ContactForm />
   </Page>
 )
 
