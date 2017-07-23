@@ -85,7 +85,7 @@
     "flow:check": "flow check",
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -x 'src/**/*.spec.js' -t html -o 'coverage/flow-report'",
     "precommit": "yarn lint",
-    "prepush": "yarn test && yarn flow:check",
+    "prepush": "yarn lint",
     "sassdoc": "sassdoc 'src/assets/sass/*'",
     "css:watch": "node-sass src/assets/sass/main.scss sass/index.css -w"
   },
