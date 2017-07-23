@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomePage component renders home page without any issues 1`] = `
-<div>
+<Page>
   <Hero />
   <Connect(Features) />
   <Connect(Meals) />
   <Steps />
-  <Cities />
-</div>
+  <Connect(Cities) />
+  <Connect(Testimonials) />
+  <ContactForm />
+</Page>
 `;

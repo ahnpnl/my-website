@@ -1,25 +1,32 @@
-@import '../../assets/sass/abstracts/variables';
-@import '../../assets/sass/abstracts/mixins';
+.wrapper__features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .features__intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: $base-unit;
 
   h2 {
     text-align: center;
     word-spacing: 2px;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: $base-unit;
 
     &:after {
       display: block;
       height: 2px;
-      background-color: map_get($colors, tahitiGold);
+      background-color: $tahitiGold;
       content: " ";
       width: 100px;
       margin: 0 auto;
-      margin-top: map_get($base, 'unit');
+      margin-top: $base-unit;
     }
   }
 
@@ -29,21 +36,19 @@
     line-height: 145%;
     text-align: center;
   }
-
-  margin-bottom: map_get($base, unit);
 }
 
-@lost clearing both;
-@lost rounder 99.9;
 .features__specs {
   lost-center: 100% 0 flex;
+  padding: $base-unit 0;
+
   .info {
-    lost-row: 1/4 0 map_get($base, 'unit');
+    lost-row: 1/4 $base-spacer;
   }
 
-  @include mq(nth($medium-up, 1)) {
+  @include media-query($medium-up) {
     .info {
-      lost-column: 1/4 0 map_get($base, 'unit');
+      lost-column: 1/4 $base-unit;
     }
   }
 

@@ -1,6 +1,6 @@
-@import '../../assets/sass/abstracts/variables';
-@import '../../assets/sass/abstracts/mixins';
-@import '../../assets/sass/abstracts/functions';
+@import '../../temp/sass/abstracts/variables';
+@import '../../temp/sass/abstracts/mixins';
+@import '../../temp/sass/abstracts/functions';
 
 .wrapper__plans {
   background-color: map_get($colors, aquaHaze);

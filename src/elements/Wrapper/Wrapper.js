@@ -4,14 +4,14 @@ import React from 'react'
 import './Wrapper.scss'
 
 type WrapperArguments = {
-  className?: string,
+  name?: string,
   children?: React.Element<any>[],
 }
 
 const Wrapper = ({ name, children }: WrapperArguments) => {
   let className = 'wrapper'
   if (name !== undefined) {
-    className = className + '__' + name;
+    className = className + ' ' + className + '__' + name;
   }
 
   return (

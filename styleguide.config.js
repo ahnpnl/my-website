@@ -14,8 +14,5 @@ module.exports = {
       templateString: false,
     },
   },
-  components: 'src/components/**/*.js',
-  require: [
-    path.join(__dirname, 'src/assets/sass/index.scss')
-  ]
+  components: 'src/components/**/*.js'
 }

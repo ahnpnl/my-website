@@ -1,7 +1,4 @@
-@import '../../assets/sass/abstracts/variables';
-@import '../../assets/sass/abstracts/mixins';
-
 .page {
-  @include stepScale('margin-top', 60px, 80px, 80px);
+  @include step-scale('margin-top', 60px, 80px, 80px);
   display: block;
 }

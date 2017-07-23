@@ -1,15 +1,11 @@
-@import '../../assets/sass/abstracts/functions';
-@import '../../assets/sass/abstracts/variables';
-@import '../../assets/sass/abstracts/mixins';
-
 .wrapper__steps {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  @include mq(nth($medium-up, 1)) {
-    padding: 0 map_get($base, unit);
+  @include media-query($medium-up) {
+    padding: 0 $base-unit;
   }
 
   .steps__intro {
@@ -20,15 +16,16 @@
       text-align: center;
       word-spacing: 2px;
       letter-spacing: 1px;
+      text-transform: uppercase;
 
       &:after {
         display: block;
         height: 2px;
-        background-color: map_get($colors, tahitiGold);
+        background-color: $tahitiGold;
         content: " ";
         width: 100px;
         margin: 0 auto;
-        margin-top: map_get($base, unit);
+        margin-top: $base-unit;
       }
     }
   }
@@ -37,19 +34,19 @@
     @extend .wrapper__steps;
     padding: 0;
 
-    @include mq(nth($medium-up, 1)) {
+    @include media-query($medium-up) {
       flex-direction: row;
     }
 
     .steps__image {
       width: 40%;
-      margin-bottom: map_get($base, 'unit');
+      margin-bottom: $base-unit;
 
-      @include mq(nth($medium-only, 1)) {
+      @include media-query($medium-only) {
         width: 25%;
       }
 
-      @include mq(nth($large-up, 1)) {
+      @include media-query($large-up) {
         width: 20%;
       }
     }
@@ -61,41 +58,41 @@
   padding: 0;
 
   align-items: flex-start;
-  @include mq(nth($medium-up, 1)) {
-    margin-left: map_get($base, 'unit');
+  @include media-query($medium-up) {
+    margin-left: $base-unit;
   }
 
   .steps__item {
     display: flex;
     align-items: center;
-    margin-bottom: map_get($base, 'unit');
+    margin-bottom: $base-unit;
 
     p {
       margin-bottom: 0;
     }
 
     div {
-      color: map_get($colors, 'tahitiGold');
+      color: $tahitiGold;
       font-size: 150%;
       height: 54px;
       width: 54px;
-      border: 2px solid #e67e22;
+      border: 2px solid $tahitiGold;
       border-radius: 50%;
       display: inline-block;
       text-align: center;
-      margin-right: map_get($base, 'unit');
-      padding: 6px 11px;
+      margin-right: $base-unit;
+      padding: 5px 11px;
 
-      @include mq(nth($small-only, 1)) {
+      @include media-query($medium-only) {
         height: 40px;
         width: 40px;
-        margin-right: 10px;
+        margin-right: $base-spacer;
         font-size: 120%;
       }
     }
 
     .steps__item__link {
-      height: map-deep-get($base, 'icon', 'large');
+      height: $icon-large-size;
       @include on-event {
         border-bottom: none;
       }
@@ -104,7 +101,7 @@
     svg {
       width: 100%;
       height: 100%;
-      fill: black;
+      fill: $black;
     }
   }
 }

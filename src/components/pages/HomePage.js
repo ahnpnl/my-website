@@ -1,14 +1,13 @@
 // @flow
 
 import React from 'react'
-import Features from '../../containers/Features'
 import Hero from '../Hero/Hero'
+import Page from '../../elements/Page/Page'
+import Features from '../../containers/Features'
 import Meals from '../../containers/Meals'
 import Steps from '../Steps/Steps'
 import Cities from '../../containers/Cities'
-import Page from '../../elements/Page/Page'
 import Testimonials from '../../containers/Testimonials'
-import Plans from '../../containers/Plans'
 import ContactForm from '../ContactForm/ContactForm'
 
 /**
@@ -22,7 +21,6 @@ const HomePage = () => (
     <Steps />
     <Cities />
     <Testimonials />
-    <Plans />
     <ContactForm />
   </Page>
 )

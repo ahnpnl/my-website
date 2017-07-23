@@ -1,0 +1,166 @@
+/* base config */
+
+$base-unit: 16px !default;
+$base-spacer: $base-unit / 2 !default;
+
+$base-padding: $base-unit !default;
+$base-margin: $base-unit !default;
+$base-background-color: $aqua-haze !default;
+$base-border-radius: $base-unit !default;
+$base-border-color: $athens-gray !default;
+
+
+/* row */
+
+$row-margin-bottom: $base-unit !default;
+
+
+/* wrapper */
+
+$wrapper-margin: 0 auto !default;
+$wrapper-padding-small: 0 !default;
+$wrapper-padding-medium: 0 !default;
+$wrapper-padding-large: $base-unit !default;
+$wrapper-padding-xlarge: $base-unit !default;
+$wrapper-width: auto !default;
+$wrapper-max-width: lower-bound($xlarge-range) !default;
+
+
+/* font  */
+
+$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
+$font-family-serif: serif !default;
+$font-family-monospace: Consolas, Courier, monospace !default;
+$font-family-brand: 'Open Sans', Arial, sans-serif !default;
+
+$base-font-family: $font-family-brand !default;
+$base-font-size: 13px !default;
+$base-line-height: 21px !default;
+$base-font-weight: 400 !default;
+$base-font-weight-bold: 600 !default;
+$base-color: $black !default;
+$base-selection-color: $white !default;
+$base-selection-background-color: $eastern-blue !default;
+
+$heading-font-family: $font-family-brand !default;
+$heading-font-weight: 600 !default;
+$heading-line-height: 1.35 !default;
+$heading-color: $base-color !default;
+
+$heading-h1-size: 25px !default;
+$heading-h1-size-small: $heading-h1-size !default;
+$heading-h1-size-medium: 31px !default;
+$heading-h1-size-large: 31px !default;
+
+$heading-h2-size: 25px !default;
+$heading-h3-size: 21px !default;
+$heading-h4-size: 15px !default;
+$heading-h5-size: 15px !default;
+
+$subheading-color: $regent-gray !default;
+
+
+/* inputs */
+
+$input-vertical-padding: $base-padding / 2 !default;
+$input-horizontal-padding: $base-padding / 2 !default;
+$input-font-size: $base-font-size !default;
+$input-line-height: $base-unit !default;
+
+
+/* buttons */
+
+$button-padding-vertical: $input-vertical-padding !default;
+$button-padding-horizontal: $input-horizontal-padding !default;
+$button-font-size: $input-font-size !default;
+$button-font-weight: 600 !default;
+$button-line-height: $input-line-height !default;
+$button-icon-size: $button-line-height !default;
+$button-border-radius: $base-border-radius !default;
+$button-text-shadow: 0 1px 0 rgba(255,255,255,0.69) !default;
+
+$button-primary-color: $black !default;
+$button-primary-background-color: $tahitiGold !default;
+$button-primary-inset: inset 0 -1px 0 0 $buddha-gold;
+$button-primary-hover-background-color: $dandelion !default;
+$button-primary-hover-box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13) !default;
+$button-primary-border-color: $tahitiGold !default;
+
+$button-secondary-color: $black !default;
+$button-secondary-background-color: $athens-gray !default;
+$button-secondary-inset: inset 0 -1px 0 0 $loblolly;
+$button-secondary-hover-background-color: $gallery !default;
+$button-secondary-hover-box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13) !default;
+$button-secondary-border-color: $loblolly !default;
+
+$button-success-color: $white !default;
+$button-success-background-color: $fruit-salad !default;
+$button-success-inset: inset 0 -1px 0 0 $apple;
+$button-success-hover-background-color: $button-success-background-color !default;
+$button-success-hover-box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13) !default;
+$button-success-border-color: $apple !default;
+
+$button-error-color: $white !default;
+$button-error-background-color: $well-read !default;
+$button-error-inset: inset 0 -1px 0 0 $tamarillo !default;
+$button-error-hover-background-color: $button-error-background-color !default;
+$button-error-hover-box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13) !default;
+$button-error-border-color: $tamarillo !default;
+
+
+/* dropdowns */
+
+$dropdown-background-color: $white !default;
+$dropdown-border-width: 2px !default;
+$dropdown-border-style: solid !default;
+$dropdown-border-color: $regent-gray !default;
+$dropdown-item-background-color: $aqua-haze !default;
+$dropdown-item-box-shadow: inset 0 -1px 0 0 $base-border-color !default;
+$dropdown-item-hover-background-color: $mischka !default;
+
+
+/* footer */
+
+$footer-top-color: $white !default;
+$footer-top-background-color: $regent-gray !default;
+$footer-top-link-color: $athens-gray !default;
+$footer-bottom-color: $white !default;
+$footer-bottom-background-color: $red-berry !default;
+
+/* icons */
+$icon-xsmall-size: $base-unit / 2 !default;
+$icon-small-size: $base-unit !default;
+$icon-normal-size: $base-unit * 2 !default;
+$icon-large-size: $base-unit * 3 !default;
+$icon-xlarge-size: $base-unit * 4 !default;
+$icon-social-media-size: $base-unit * 1.5 !default;
+
+
+/* links */
+
+$link-color: $red-berry !default;
+$link-hover-color: $link-color !default;
+$link-active-color: $base-color !default;
+
+
+/* modal */
+
+$modal-background-color: $white !default;
+$modal-border-width: 0 !default;
+$modal-border-style: solid !default;
+$modal-border-color: $base-border-color !default;
+$modal-border-radius: 0 !default;
+
+
+/* overlay */
+
+$overlay-background-color: rgba(0, 0, 0, 0.6) !default;
+$overlay-cursor: pointer !default;
+
+
+/* panels */
+
+$panel-background-color: $white !default;
+$panel-border: 1px solid $base-border-color !default;
+$panel-border-radius: 0 !default;
+

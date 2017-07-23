@@ -1,18 +1,8 @@
-@import '../../assets/sass/abstracts/mixins';
-@import '../../assets/sass/abstracts/variables';
-
 .wrapper {
   margin: 0 auto;
-  @include stepScale('padding-left', 0px, 0px, map_get($base, unit));
-  @include stepScale('padding-right', 0px, 0px, map_get($base, unit));
   width: auto;
-  max-width: $DEVICE_LARGE_UPPER_BOUND;
-}
+  max-width: 1199px;
 
-.wrapper__features {
-  @extend .wrapper;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include step-scale('padding-left', 0px, 0px, $base-unit);
+  @include step-scale('padding-right', 0px, 0px, $base-unit);
 }

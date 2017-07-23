@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testimonials component renders correctly without any issues 1`] = `
+<Row
+  className="testimonials"
+>
+  <Wrapper
+    name="testimonials"
+  >
+    <div
+      className="testimonials__background"
+    >
+      <div
+        className="testimonials__intro"
+      >
+        <h2>
+          Our customers can't live without us
+        </h2>
+      </div>
+      <div
+        className="testimonials__body"
+      >
+        <div
+          className="testimonial__quote"
+        >
+          <blockquote>
+            Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+            <cite>
+              <img
+                alt="Alberto Duncan"
+                src="https://lh6.googleusercontent.com/jD4zPA2b_nZuI-9e7Sh0HHHcRhGcJ8NK8rqWI9Z6OnsEyJC-d8R2rQ"
+              />
+              Alberto Duncan
+            </cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </Wrapper>
+</Row>
+`;

@@ -1,0 +1,95 @@
+/* debugging */
+
+@mixin debug($color: $eastern-blue, $important: false) {
+  @if $important {
+    * {
+      background: rgba($color, .05) !important;
+    }
+  } @else {
+    * {
+      background: rgba($color, .05);
+    }
+  }
+}
+
+/* clearfix */
+
+@mixin cf {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/// Add `&hover`, `&active`, `&focus` when styling a link
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin media-query($screen-type) {
+  @media #{$screen-type} {
+    @content;
+  }
+}
+
+/* step scale */
+
+@mixin step-scale($property, $small-value, $medium-value: $small-value, $large-value: $medium-value, $xlarge-value: $large-value) {
+  & {
+    #{$property}: $small-value;
+
+    /* medium up */
+    @media screen and (min-width:768px) {
+      #{$property}: $medium-value;
+    }
+
+    /* large up */
+    @media screen and (min-width:1024px) {
+      #{$property}: $large-value;
+    }
+
+    /* xlarge up */
+    @media screen and (min-width:1200px) {
+      #{$property}: $xlarge-value;
+    }
+  }
+}
+
+/* shapes */
+
+@mixin circle($width) {
+  border-radius: 100%;
+  width: $width;
+  height: $width;
+}
+
+@mixin square($width) {
+  width: $width;
+  height: $width;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/* button */
+
+/**/

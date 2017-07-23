@@ -1,0 +1,20 @@
+/* base */
+
+@import 'typography';
+
+svg {
+  display: inline-flex;
+  flex-shrink: 1;
+
+  width: $icon-social-media-size;
+  height: $icon-social-media-size;
+
+  fill: currentColor;
+
+  use {
+    fill: inherit;
+  }
+
+  @include step-scale('width', $icon-normal-size, $icon-normal-size);
+  @include step-scale('height', $icon-normal-size, $icon-normal-size);
+}

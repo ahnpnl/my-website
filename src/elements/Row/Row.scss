@@ -1,5 +1,3 @@
-@import '../../assets/sass/abstracts/variables';
-
 section {
-  margin-bottom: map_get($base, unit);
+  margin-bottom: $base-unit;
 }

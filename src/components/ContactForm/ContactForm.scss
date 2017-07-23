@@ -1,15 +1,12 @@
-@import '../../assets/sass/abstracts/variables';
-@import '../../assets/sass/abstracts/mixins';
-
 .wrapper__contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: map_get($colors, pureWhite);
+  background-color: $white;
 
-  @include mq(nth($medium-up, 1)) {
-    padding: 0 map_get($base, unit);
+  @include media-query($medium-up) {
+    padding: 0 $base-unit;
   }
 
   .contact__intro {
@@ -17,15 +14,17 @@
       text-align: center;
       word-spacing: 2px;
       letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: $base-unit;
 
       &:after {
         display: block;
         height: 2px;
-        background-color: map_get($colors, tahitiGold);
+        background-color: $tahitiGold;
         content: " ";
         width: 100px;
         margin: 0 auto;
-        margin-top: map_get($base, 'unit');
+        margin-top: $base-unit;
       }
     }
   }
@@ -33,11 +32,11 @@
   .contact__body {
     width: 90%;
 
-    @include mq(nth($medium-up, 1)) {
+    @include media-query($medium-up) {
       width: 60%;
     }
 
-    @include mq(nth($large-up, 1)) {
+    @include media-query($large-up) {
       width: 50%;
     }
 
@@ -46,7 +45,7 @@
       input[type=email],
       select,
       textarea {
-        padding: map_get($base, spacer);
+        padding: $base-spacer;
         border-radius: 3px;
         border: 1px solid #ccc;
       }
@@ -56,19 +55,17 @@
       }
 
       input[type=checkbox] {
-        margin: map_get($base, spacer) 5px map_get($base, spacer) 0;
+        margin: $base-spacer 5px $base-spacer 0;
       }
 
-      @lost clearing both;
-      @lost rounder 99.9;
       .form__row {
         lost-center: 100% 0 flex;
         align-items: center;
-        margin-bottom: map_get($base, unit);
+        margin-bottom: $base-unit;
 
         label {
           lost-row: 1/3 0;
-          margin-bottom: map_get($base, spacer);
+          margin-bottom: $base-spacer;
         }
 
         input[type=text],
@@ -78,7 +75,7 @@
           flex: 1 0 auto;
         }
 
-        @include mq(nth($medium-up, 1)) {
+        @include media-query($medium-up) {
           label {
             lost-column: 1/3 0 0;
             margin-bottom: 0;
@@ -94,7 +91,7 @@
       }
 
       .form__row:not(:last-child) {
-        @include stepScale('font-size', 85%, 100%, 100%);
+        @include step-scale('font-size', 85%, 100%, 100%);
       }
 
       .form__row:last-child {

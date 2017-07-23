@@ -3,102 +3,115 @@
 exports[`Footer component renders without any issues 1`] = `
 <footer>
   <div
-    className="footer__row"
+    className="wrapper wrapper__footer"
   >
     <div
-      className="footer__row__nav"
+      className="footer__main"
     >
-      <a
-        className="footer__nav__link"
-        href=""
+      <nav
+        className="footer__row nav"
       >
-        About us
-      </a>
-      <a
-        className="footer__nav__link"
-        href=""
+        <a
+          className="footer__nav__link"
+          href=""
+        >
+          About us
+        </a>
+        <a
+          className="footer__nav__link"
+          href=""
+        >
+          Blog
+        </a>
+        <a
+          className="footer__nav__link"
+          href=""
+        >
+          Press
+        </a>
+        <a
+          className="footer__nav__link"
+          href=""
+        >
+          iOS App
+        </a>
+        <a
+          className="footer__nav__link"
+          href=""
+        >
+          Android App
+        </a>
+      </nav>
+      <nav
+        className="footer__row socialmedia"
       >
-        Blog
-      </a>
-      <a
-        className="footer__nav__link"
-        href=""
-      >
-        Press
-      </a>
-      <a
-        className="footer__nav__link"
-        href=""
-      >
-        iOS App
-      </a>
-      <a
-        className="footer__nav__link"
-        href=""
-      >
-        Android App
-      </a>
+        <a
+          className="footer__nav__link"
+          href=""
+        >
+          <svg
+            aria-labelledby="icon__facebook-title"
+            role="img"
+          >
+            <title>
+              facebook
+            </title>
+            <use
+              pointerEvents="none"
+              xlinkHref="#icons-facebook"
+            />
+          </svg>
+          <span>
+            Facebook
+          </span>
+        </a>
+        <a
+          className="footer__nav__link"
+          href=""
+        >
+          <svg
+            aria-labelledby="icon__twitter-title"
+            role="img"
+          >
+            <title>
+              twitter
+            </title>
+            <use
+              pointerEvents="none"
+              xlinkHref="#icons-twitter"
+            />
+          </svg>
+          <span>
+            Twitter
+          </span>
+        </a>
+        <a
+          className="footer__nav__link"
+          href=""
+        >
+          <svg
+            aria-labelledby="icon__instagram-title"
+            role="img"
+          >
+            <title>
+              instagram
+            </title>
+            <use
+              pointerEvents="none"
+              xlinkHref="#icons-instagram"
+            />
+          </svg>
+          <span>
+            Instagram
+          </span>
+        </a>
+      </nav>
     </div>
     <div
-      className="footer__row__nav"
+      className="footer__subfooter"
     >
-      <a
-        className="footer__nav__link"
-        href=""
-      >
-        <svg
-          aria-labelledby="icon__facebook-title"
-          role="img"
-        >
-          <title>
-            facebook
-          </title>
-          <use
-            pointerEvents="none"
-            xlinkHref="#icons-facebook"
-          />
-        </svg>
-      </a>
-      <a
-        className="footer__nav__link"
-        href=""
-      >
-        <svg
-          aria-labelledby="icon__twitter-title"
-          role="img"
-        >
-          <title>
-            twitter
-          </title>
-          <use
-            pointerEvents="none"
-            xlinkHref="#icons-twitter"
-          />
-        </svg>
-      </a>
-      <a
-        className="footer__nav__link"
-        href=""
-      >
-        <svg
-          aria-labelledby="icon__instagram-title"
-          role="img"
-        >
-          <title>
-            instagram
-          </title>
-          <use
-            pointerEvents="none"
-            xlinkHref="#icons-instagram"
-          />
-        </svg>
-      </a>
+      Copyright © 2017 by Omnifood. All rights reserved.
     </div>
-  </div>
-  <div
-    className="footer__subfooter"
-  >
-    Copyright © 2017 by Omnifood. All rights reserved.
   </div>
 </footer>
 `;

@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm component renders correctly without any issues 1`] = `
+<Row
+  className="contact"
+>
+  <Wrapper
+    name="contact"
+  >
+    <div
+      className="contact__intro"
+    >
+      <h2>
+        We're happy to hear from you
+      </h2>
+    </div>
+    <div
+      className="contact__body"
+    >
+      <form
+        action="#"
+        className="contact__form"
+        method="post"
+      >
+        <div
+          className="form__row"
+        >
+          <label
+            htmlFor="name"
+          >
+            Name
+          </label>
+          <input
+            className="name"
+            name="name"
+            placeholder="Your name"
+            required={true}
+            type="text"
+          />
+        </div>
+        <div
+          className="form__row"
+        >
+          <label
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            className="email"
+            name="email"
+            placeholder="Your email"
+            required={true}
+            type="email"
+          />
+        </div>
+        <div
+          className="form__row"
+        >
+          <label
+            htmlFor="find-us"
+          >
+            How did you find us?
+          </label>
+          <select
+            id="find-us"
+            name="find-us"
+          >
+            <option
+              value="friends"
+            >
+              Friends
+            </option>
+            <option
+              value="search"
+            >
+              Search engine
+            </option>
+            <option
+              value="ad"
+            >
+              Advertisement
+            </option>
+            <option
+              value="other"
+            >
+              Other
+            </option>
+          </select>
+        </div>
+        <div
+          className="form__row"
+        >
+          <label
+            htmlFor="news"
+          >
+            Newsletter?
+          </label>
+          <input
+            className="news"
+            name="news"
+            type="checkbox"
+          />
+          Yes, please!
+        </div>
+        <div
+          className="form__row"
+        >
+          <label
+            htmlFor="message"
+          >
+            Drop us a line
+          </label>
+          <textarea
+            defaultValue=""
+            name="message"
+            placeholder="Your message"
+          />
+        </div>
+        <div
+          className="form__row"
+        >
+          <Button
+            onClick={[Function]}
+            text="Send it!"
+          />
+        </div>
+      </form>
+    </div>
+  </Wrapper>
+</Row>
+`;

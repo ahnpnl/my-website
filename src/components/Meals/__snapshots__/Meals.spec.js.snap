@@ -1,72 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Meals component renders correctly without issues 1`] = `
-<section
+<Row
   className="meals"
 >
-  <figure
-    className="meal__photo"
+  <Wrapper
+    name="meals"
   >
-    <img
-      alt="alt 1"
-      src="imageURL 1"
-    />
-  </figure>
-  <figure
-    className="meal__photo"
-  >
-    <img
-      alt="alt 2"
-      src="imageURL 2"
-    />
-  </figure>
-  <figure
-    className="meal__photo"
-  >
-    <img
-      alt="alt 3"
-      src="imageURL 3"
-    />
-  </figure>
-  <figure
-    className="meal__photo"
-  >
-    <img
-      alt="alt 4"
-      src="imageURL 4"
-    />
-  </figure>
-  <figure
-    className="meal__photo"
-  >
-    <img
-      alt="alt 5"
-      src="imageURL 5"
-    />
-  </figure>
-  <figure
-    className="meal__photo"
-  >
-    <img
-      alt="alt 4"
-      src="imageURL 6"
-    />
-  </figure>
-  <figure
-    className="meal__photo"
-  >
-    <img
-      alt="alt 4"
-      src="imageURL 7"
-    />
-  </figure>
-  <figure
-    className="meal__photo"
-  >
-    <img
-      alt="alt 4"
-      src="imageURL 8"
-    />
-  </figure>
-</section>
+    <figure
+      className="meal__photo"
+    >
+      <img
+        alt="alt 1"
+        src="imageURL 1"
+      />
+    </figure>
+    <figure
+      className="meal__photo"
+    >
+      <img
+        alt="alt 2"
+        src="imageURL 2"
+      />
+    </figure>
+    <figure
+      className="meal__photo"
+    >
+      <img
+        alt="alt 3"
+        src="imageURL 3"
+      />
+    </figure>
+    <figure
+      className="meal__photo"
+    >
+      <img
+        alt="alt 4"
+        src="imageURL 4"
+      />
+    </figure>
+    <figure
+      className="meal__photo"
+    >
+      <img
+        alt="alt 5"
+        src="imageURL 5"
+      />
+    </figure>
+    <figure
+      className="meal__photo"
+    >
+      <img
+        alt="alt 4"
+        src="imageURL 6"
+      />
+    </figure>
+    <figure
+      className="meal__photo"
+    >
+      <img
+        alt="alt 4"
+        src="imageURL 7"
+      />
+    </figure>
+    <figure
+      className="meal__photo"
+    >
+      <img
+        alt="alt 4"
+        src="imageURL 8"
+      />
+    </figure>
+  </Wrapper>
+</Row>
 `;

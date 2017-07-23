@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
 import App from './components/App'
-import store from './store'
+import store, { history } from './store'
 import * as DeviceInfoModule from './modules/deviceInfo'
-
-import './assets/sass/index.scss'
+import { ConnectedRouter } from 'react-router-redux'
 
 window.___store = store
 
@@ -20,7 +19,9 @@ window.addEventListener('resize', () => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
 )

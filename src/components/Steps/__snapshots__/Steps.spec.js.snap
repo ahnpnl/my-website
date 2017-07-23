@@ -1,81 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Steps component renders correctly without any issues 1`] = `
-<section
+<Row
   className="steps"
 >
-  <div
-    className="steps__intro"
-  >
-    <h2>
-      How it works — Simple as 1, 2, 3
-    </h2>
-  </div>
-  <div
-    className="steps__description"
+  <Wrapper
+    name="steps"
   >
     <div
-      className="steps__image"
+      className="steps__intro"
     >
-      <img
-        alt="Omnifood app on iPhone"
-        src="https://lh6.googleusercontent.com/CZHrY4sPHrtka5iLVGyQYDMK3JSUYakzUDUv4EC6GEpYqeBZMaygcg"
-      />
+      <h2>
+        How it works — Simple as 1, 2, 3
+      </h2>
     </div>
     <div
-      className="steps__items"
+      className="steps__description"
     >
       <div
-        className="steps__item"
+        className="steps__image"
       >
-        <div>
-          1
-        </div>
-        <p>
-          Choose the subscription plan that best fits your needs and sign up today.
-        </p>
+        <img
+          alt="Omnifood app on iPhone"
+          src="https://lh6.googleusercontent.com/CZHrY4sPHrtka5iLVGyQYDMK3JSUYakzUDUv4EC6GEpYqeBZMaygcg"
+        />
       </div>
       <div
-        className="steps__item"
+        className="steps__items"
       >
-        <div>
-          2
-        </div>
-        <p>
-          Order your delicious meal using our mobile app or website. Or you can even call us!
-        </p>
-      </div>
-      <div
-        className="steps__item"
-      >
-        <div>
-          3
-        </div>
-        <p>
-          Enjoy your meal after less than 20 minutes. See you the next time!
-        </p>
-      </div>
-      <div
-        className="steps__item"
-      >
-        <a
-          className="steps__item__link"
-          href=""
+        <div
+          className="steps__item"
         >
-          <Icon
-            name="app-store-badge"
-          />
-        </a>
-        <a
-          className="steps__item__link"
-          href=""
+          <div>
+            1
+          </div>
+          <p>
+            Choose the subscription plan that best fits your needs and sign up today.
+          </p>
+        </div>
+        <div
+          className="steps__item"
         >
-          <Icon
-            name="google-play-badge"
-          />
-        </a>
+          <div>
+            2
+          </div>
+          <p>
+            Order your delicious meal using our mobile app or website. Or you can even call us!
+          </p>
+        </div>
+        <div
+          className="steps__item"
+        >
+          <div>
+            3
+          </div>
+          <p>
+            Enjoy your meal after less than 20 minutes. See you the next time!
+          </p>
+        </div>
+        <div
+          className="steps__item"
+        >
+          <a
+            className="steps__item__link"
+            href=""
+          >
+            <Icon
+              name="app-store-badge"
+            />
+          </a>
+          <a
+            className="steps__item__link"
+            href=""
+          >
+            <Icon
+              name="google-play-badge"
+            />
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </Wrapper>
+</Row>
 `;

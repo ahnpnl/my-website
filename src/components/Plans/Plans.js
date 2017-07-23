@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 
 import Row from '../../elements/Row/Row'
@@ -6,11 +8,16 @@ import Button from '../../elements/Button/Button'
 import Icon from '../../elements/Icon/Icon'
 
 import './Plans.scss'
+import { PlansType } from '../../utils/types'
+
+type Arguments = {
+  planItems: PlansType
+}
 
 /**
  * Plan component displays 3 plans
  */
-const Plans = ({ planItems }) => (
+const Plans = ({ planItems }: Arguments) => (
   <Row className="plans">
     <Wrapper name="plans">
       <div className="plans__intro">

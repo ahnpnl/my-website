@@ -2,9 +2,11 @@
 
 exports[`Header components renders a logo and a navigation button on small screen 1`] = `
 <header>
-  <nav>
+  <Wrapper
+    name="header"
+  >
     <div
-      className="logo"
+      className="header__logo"
     >
       <img
         alt="Omnifood logo"
@@ -12,8 +14,8 @@ exports[`Header components renders a logo and a navigation button on small scree
         src="logo-white.png"
       />
     </div>
-    <div
-      className="main__nav__compactmenu"
+    <nav
+      className="nav__compactmenu"
     >
       <a
         className="compactmenu__link"
@@ -24,16 +26,69 @@ exports[`Header components renders a logo and a navigation button on small scree
           name="category"
         />
       </a>
-    </div>
-  </nav>
+      <Modal
+        contentLabel="CategoryNavigationModal Menu"
+        displayMode="smallScreen"
+        isOpen={false}
+        onRequestClose={[Function]}
+      >
+        <ModalHeader
+          closeButtonTitle="Close modal"
+          onRequestClose={[Function]}
+        >
+          Menu
+        </ModalHeader>
+        <div
+          className="modal__body"
+        >
+          <ul>
+            <li>
+              <a
+                className="nav__link"
+                href="#features"
+              >
+                Food delivery
+              </a>
+            </li>
+            <li>
+              <a
+                className="nav__link"
+                href="#works"
+              >
+                How it works
+              </a>
+            </li>
+            <li>
+              <a
+                className="nav__link"
+                href="#cities"
+              >
+                Our cities
+              </a>
+            </li>
+            <li>
+              <a
+                className="nav__link"
+                href="#plans"
+              >
+                Sign up
+              </a>
+            </li>
+          </ul>
+        </div>
+      </Modal>
+    </nav>
+  </Wrapper>
 </header>
 `;
 
 exports[`Header components renders a logo and normal navigation on medium up screen 1`] = `
 <header>
-  <nav>
+  <Wrapper
+    name="header"
+  >
     <div
-      className="logo"
+      className="header__logo"
     >
       <img
         alt="Omnifood logo"
@@ -41,50 +96,34 @@ exports[`Header components renders a logo and normal navigation on medium up scr
         src="logo-white.png"
       />
     </div>
-    <ul
-      className="main-nav"
+    <nav
+      className="nav__links"
     >
-      <li
-        className="nav__item"
+      <a
+        className="nav__link"
+        href="#features"
       >
-        <a
-          className="main-nav__link"
-          href="#features"
-        >
-          Food delivery
-        </a>
-      </li>
-      <li
-        className="nav__item"
+        Food delivery
+      </a>
+      <a
+        className="nav__link"
+        href="#works"
       >
-        <a
-          className="main-nav__link"
-          href="#works"
-        >
-          How it works
-        </a>
-      </li>
-      <li
-        className="nav__item"
+        How it works
+      </a>
+      <a
+        className="nav__link"
+        href="#cities"
       >
-        <a
-          className="main-nav__link"
-          href="#cities"
-        >
-          Our cities
-        </a>
-      </li>
-      <li
-        className="nav__item"
+        Our cities
+      </a>
+      <a
+        className="nav__link"
+        href="#plans"
       >
-        <a
-          className="main-nav__link"
-          href="#plans"
-        >
-          Sign up
-        </a>
-      </li>
-    </ul>
-  </nav>
+        Sign up
+      </a>
+    </nav>
+  </Wrapper>
 </header>
 `;

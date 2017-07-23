@@ -1,38 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Features component renders correctly without issues 1`] = `
-<section
+<Row
   className="features"
 >
-  <div
-    className="features__intro"
+  <Wrapper
+    name="features"
   >
-    <h2>
-      Get food fast — not fast food
-    </h2>
-    <p>
-      Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
-    </p>
-  </div>
-  <div
-    className="features__specs"
-  >
-    <InfoItem
-      text="text 1"
-      title="title 1"
-    />
-    <InfoItem
-      text="text 2"
-      title="title 2"
-    />
-    <InfoItem
-      text="text 3"
-      title="title 3"
-    />
-    <InfoItem
-      text="text 4"
-      title="title 4"
-    />
-  </div>
-</section>
+    <div
+      className="features__intro"
+    >
+      <h2>
+        Get food fast — not fast food
+      </h2>
+      <p>
+        Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
+      </p>
+    </div>
+    <div
+      className="features__specs"
+    >
+      <InfoItem
+        text="text 1"
+        title="title 1"
+      />
+      <InfoItem
+        text="text 2"
+        title="title 2"
+      />
+      <InfoItem
+        text="text 3"
+        title="title 3"
+      />
+      <InfoItem
+        text="text 4"
+        title="title 4"
+      />
+    </div>
+  </Wrapper>
+</Row>
 `;

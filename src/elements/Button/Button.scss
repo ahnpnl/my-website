@@ -1,7 +1,3 @@
-@import '../../assets/sass/abstracts/functions';
-@import '../../assets/sass/abstracts/variables';
-@import '../../assets/sass/abstracts/mixins';
-
 %baseButton {
   display: flex;
   appearance: none;
@@ -10,15 +6,15 @@
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  padding: map-deep-get($button, 'padding', 'vertical') map-deep-get($button, 'padding', 'horizontal');
-  margin: 0 6px;
+  padding: $button-padding-vertical $button-padding-horizontal;
+  margin: 0 $base-spacer;
   color: currentColor;
   border: 0;
-  border-radius: map_get($button, 'borderRadius');
+  border-radius: $base-border-radius;
   font-family: 'Lato', helvetica, arial, sans-serif;
   font-size: 80%;
-  font-weight: map_get($button, 'fontWeight');
-  line-height: map-deep-get($base, 'icon', 'small');
+  font-weight: $button-font-weight;
+  line-height: $icon-small-size;
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -26,64 +22,63 @@
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 
   svg + span, span + svg, svg + svg {
-    margin-left: map_get($base, 'spacer');
+    margin-left: $base-spacer;
   }
 }
 
 %primary {
-  color: map_get($colors, 'pureWhite');
-  border: 1px solid map-deep-get($button, 'borderColor', 'primary');
-  background-color: map-deep-get($button, 'backgroundColor', 'primary');
-  box-shadow: inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'primary');
+  color: $white;
+  border: 1px solid $button-primary-border-color;
+  background-color: $button-primary-background-color;
+  box-shadow: inset 0 -1px 0 0 $button-primary-border-color;
 
   @include on-event {
-    background-color: map-deep-get($button, 'hoverBackgroundColor', 'primary');
+    background-color: $button-primary-hover-background-color;
     text-decoration: none;
     box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13),
-                inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'primary');
+                inset 0 -1px 0 0 $button-primary-border-color;
   }
 }
 
 %secondary {
-  color: map_get($font, 'color');
-  background-color: map-deep-get($button, 'backgroundColor', 'secondary');
-  box-shadow: inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'secondary');
+  color: $button-secondary-color;
+  background-color: $button-secondary-background-color;
+  box-shadow: inset 0 -1px 0 0 $button-secondary-border-color;
 
   @include on-event {
-    color: map_get($colors, 'mineShaft');
-    background-color: map-deep-get($button, 'hoverBackgroundColor', 'secondary');
+    background-color: $button-secondary-hover-background-color;
     box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13),
-                inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'secondary');
+                inset 0 -1px 0 0 $button-secondary-border-color;
   }
 }
 
 %success {
-  color: map_get($colors, 'aquaHaze');
+  color: $button-success-color;
   text-shadow: none;
-  background-color: map-deep-get($button, 'backgroundColor', 'success');
-  box-shadow: inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'success');
+  background-color: $button-success-background-color;
+  box-shadow: inset 0 -1px 0 0 $button-success-border-color;
 
   &:hover {
     box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13),
-                inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'success');
+                inset 0 -1px 0 0 $button-success-border-color;
   }
 }
 
 %error {
-  color: map_get($colors, 'aquaHaze');
+  color: $button-error-color;
   text-shadow: none;
-  background-color: map-deep-get($button, 'backgroundColor', 'error');
-  box-shadow: inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'error');
+  background-color: $button-error-background-color;
+  box-shadow: inset 0 -1px 0 0 $button-error-border-color;
 
   &:hover {
     box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.13),
-                inset 0 -1px 0 0 map-deep-get($button, 'borderColor', 'error');
+                inset 0 -1px 0 0 $button-error-border-color;
   }
 }
 
 %close {
   background: transparent;
-  color: map_get($colors, 'black');
+  color: $black;
   box-shadow: none;
 
   &:hover {

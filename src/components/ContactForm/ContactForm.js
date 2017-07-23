@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import Wrapper from '../../elements/Wrapper/Wrapper'
 import Row from '../../elements/Row/Row'
@@ -42,7 +44,7 @@ const ContactForm = () => (
             <textarea name="message" placeholder="Your message" defaultValue="" />
           </div>
           <div className="form__row">
-            <Button text="Send it!" />
+            <Button text="Send it!" onClick={() => {}}/>
           </div>
         </form>
       </div>

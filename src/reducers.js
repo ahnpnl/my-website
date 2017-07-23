@@ -6,6 +6,7 @@ import meals from './modules/meals'
 import cities from './modules/cities'
 import testimonials from './modules/testimonials'
 import plans from './modules/plans'
+import { routerReducer } from 'react-router-redux'
 
 const reducers = combineReducers({
   cities,
@@ -14,6 +15,7 @@ const reducers = combineReducers({
   header,
   meals,
   plans,
+  router: routerReducer,
   testimonials,
 })
 

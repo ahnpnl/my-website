@@ -1,15 +1,17 @@
 import React from 'react'
 
-import Footer from './Footer/Footer'
-import Header from '../containers/Header'
-import HomePage from './pages/HomePage'
-
 import './App.scss'
+import Header from '../containers/Header'
+import Footer from './Footer/Footer'
+import HomePage from './pages/HomePage'
+import { Route } from 'react-router-dom'
+import HouseDetailPage from './pages/HouseDetailPage'
 
 const App = () => (
   <div className="app__container">
     <Header />
-    <HomePage />
+    <Route exact path="/" component={ HomePage } />
+    <Route exact path="/buy" component={ HouseDetailPage } />
     <Footer />
   </div>
 )

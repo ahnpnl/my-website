@@ -6,10 +6,11 @@ import PropTypes from 'prop-types'
 import Icon from '../../elements/Icon/Icon'
 import type { DeviceInfo } from '../../utils/types'
 
-import './Header.scss'
 import Modal from '../Modal/Modal'
 import ModalHeader from '../Modal/ModalHeader'
+import Wrapper from '../../elements/Wrapper/Wrapper'
 
+import './Header.scss'
 import '../Modal/ModalHeader.scss'
 
 type HeaderArguments = {
@@ -23,37 +24,37 @@ type HeaderArguments = {
  */
 const Header = ({ deviceInfo, isOpen, setOpenState }: HeaderArguments) => {
   return (
-    <div className="header__wrapper">
-      <header>
+    <header>
+      <Wrapper name="header">
         <div className="header__logo">
-          <img src={require('../../assets/img/logo-white.png')} alt="Omnifood logo" className="logo" />
+          <img src={ require('../../assets/img/logo-white.png') } alt="Omnifood logo" className="logo" />
         </div>
-        {!deviceInfo.deviceType.isSmall
+        { !deviceInfo.deviceType.isSmall
           ? renderNormalNavigation()
           : renderCompactMenu(isOpen, setOpenState)
         }
-      </header>
-    </div>
+      </Wrapper>
+    </header>
   )
 }
 
 function renderCompactMenu(isOpen: boolean, setOpenState: (isOpen: boolean) => mixed) {
   return (
     <nav className="nav__compactmenu">
-      <a href="" className="compactmenu__link" onClick={(event) => {
+      <a href="" className="compactmenu__link" onClick={ (event) => {
         event.preventDefault()
         setOpenState(!isOpen)
-      }}>
+      } }>
         <Icon name="category" />
       </a>
       <Modal
-        isOpen={isOpen}
+        isOpen={ isOpen }
         contentLabel="CategoryNavigationModal Menu"
-        onRequestClose={() => setOpenState(false)}
+        onRequestClose={ () => setOpenState(false) }
         displayMode="smallScreen"
       >
         <ModalHeader
-          onRequestClose={() => setOpenState(false)}
+          onRequestClose={ () => setOpenState(false) }
           closeButtonTitle="Close modal"
         >
           Menu

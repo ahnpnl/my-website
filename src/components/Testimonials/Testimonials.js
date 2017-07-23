@@ -1,14 +1,21 @@
+// @flow
+
 import React from 'react'
 
 import Wrapper from '../../elements/Wrapper/Wrapper'
 import Row from '../../elements/Row/Row'
 
 import './Testimonials.scss'
+import { TestimonialsType } from '../../utils/types'
+
+type Arguments = {
+  testimonialItems: TestimonialsType
+}
 
 /**
  * Testimonials component displays 3 testimonials
  */
-const Testimonials = ({ testimonialItems }) => (
+const Testimonials = ({ testimonialItems } : Arguments) => (
   <Row className="testimonials">
     <Wrapper name="testimonials">
       <div className="testimonials__background">

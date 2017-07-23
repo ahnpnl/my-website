@@ -1,30 +1,26 @@
-@import '../../assets/sass/abstracts/mixins';
-@import '../../assets/sass/abstracts/functions';
-@import '../../assets/sass/abstracts/variables';
-
-.header__wrapper {
+header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: map_get($zIndex, fixedFloating);
+  z-index: map_get($layers, fixed-floating);
+  background-color: $trout;
+}
 
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.wrapper__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-    height: 60px;
-    background-color: map_get($colors, 'trout');
-    color: map_get($colors, 'pureWhite');
+  height: 60px;
+  color: $white;
 
-    @include stepScale('padding-left', 8px, map_get($base, 'unit'), map_get($base, 'unit'));
-    @include stepScale('padding-right', 8px, map_get($base, 'unit'), map_get($base, 'unit'));
+  @include step-scale('padding-left', $base-spacer, $base-unit, $base-unit);
+  @include step-scale('padding-right', $base-spacer, $base-unit, $base-unit);
 
-    @include mq(nth($medium-up, 1)) {
-      height: 80px;
-    }
+  @include media-query($medium-up) {
+    height: 80px;
   }
 }
 
@@ -32,7 +28,7 @@
   img {
     height: 50px;
 
-    @include mq(nth($medium-up, 1)) {
+    @include media-query($medium-up) {
       height: 70px;
     }
   }
@@ -42,43 +38,43 @@
   display: flex;
 }
 
-.nav__link {
-  color: map_get($colors, tahitiGold);
-  text-transform: uppercase;
-  font-size: 90%;
-
-  @include on-event {
-    border-bottom: none;
-  }
-
-  @include mq(nth($medium-up, 1)) {
-    color: map_get($colors, mischka);
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.2s;
-
-    @include on-event {
-      color: map_get($colors, pureWhite);
-      border-bottom: 2px solid map_get($colors, tahitiGold);
-    }
-  }
-}
-
-.nav__link:not(:last-child) {
-  margin-right: map_get($base, unit);
-}
-
 .compactmenu__link {
   @include on-event {
     border: none;
   }
 }
 
+.nav__link {
+  text-transform: uppercase;
+  font-size: 90%;
+  text-decoration: none;
+
+  @include on-event {
+    border-bottom: none;
+  }
+
+  @include media-query($medium-up) {
+    color: $mischka;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+
+    @include on-event {
+      color: $white;
+      border-bottom: 2px solid $tahitiGold;
+    }
+  }
+}
+
+.nav__link:not(:last-child) {
+  margin-right: $base-unit;
+}
+
 .modal__body {
   ul {
     li {
       line-height: 39px;
-      border-bottom: 1px solid map_get($colors, athensGray);
-      padding: 0 15px;
+      border-bottom: 1px solid $athens-gray;
+      padding: 0 $base-unit;
     }
   }
 }

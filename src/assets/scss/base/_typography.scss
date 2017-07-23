@@ -1,0 +1,40 @@
+/* base typography */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* selection */
+
+::-moz-selection {
+  color: $base-selection-color;
+  background-color: $base-selection-background-color;
+  text-shadow: none;
+}
+
+::selection {
+  color: $base-selection-color;
+  background-color: $base-selection-background-color;
+  text-shadow: none;
+}
+
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: $trout;
+  background-color: $base-background-color;
+}
+
+p {
+  @include step-scale('font-size', 85%, 100%);
+}
+
+/* external font import */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,300i,400');

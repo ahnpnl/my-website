@@ -1,26 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Hero component renders correctly without issues 1`] = `
-<section
+<Row
   className="hero"
 >
-  <h1>
-    Goodbye junk food.
-    <br />
-    Hello super healthy meals.
-  </h1>
-  <div
-    className="hero__links"
-  >
-    <Button
-      onClick={[Function]}
-      text="I'm hungry"
-    />
-    <Button
-      appearance="secondary"
-      onClick={[Function]}
-      text="Show me more"
-    />
-  </div>
-</section>
+  <Wrapper>
+    <div
+      className="panel"
+    >
+      <div
+        className="hero__background"
+      >
+        <div
+          className="hero__inner"
+        >
+          <h1>
+            Goodbye junk food.
+            <br />
+            Hello super healthy meals.
+          </h1>
+          <div
+            className="hero__links"
+          >
+            <Button
+              onClick={[Function]}
+              text="I'm hungry"
+            />
+            <Button
+              appearance="secondary"
+              onClick={[Function]}
+              text="Show me more"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </Wrapper>
+</Row>
 `;

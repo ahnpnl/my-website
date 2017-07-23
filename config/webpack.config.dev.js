@@ -1,6 +1,6 @@
 'use strict';
 
-//const autoprefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -137,14 +137,13 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.css$/,
+          /\.scss$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
           /\.svg$/,
-          /\.sass$/,
-          /\.scss$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -181,7 +180,7 @@ module.exports = {
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: [
           require.resolve('style-loader'),
           {
@@ -190,32 +189,44 @@ module.exports = {
               importLoaders: 1,
             },
           },
-        ],
-      },
-      {
-        test: /\.scss$/,
-        use: [
           {
-            loader: "style-loader" // creates style nodes from JS strings
-          },
-          {
-            loader: require.resolve('css-loader'), // translates CSS into CommonJS
+            loader: require.resolve('sass-loader'),
             options: {
-              importLoaders: 1,
+              sourceMap: true,
             },
           },
           {
-            loader: 'postcss-loader',
+            loader: require.resolve('postcss-loader'),
             options: {
-              config: {
-                path: './config/postcss.config.js'
-              }
-            }
+              ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
+              plugins: () => [
+                require('lost'),
+                require('postcss-flexbugs-fixes'),
+                require('postcss-pxtorem')({
+                  prop_white_list: ['font', 'font-size', 'line-height', 'width', 'height', 'min-width', 'min-height', 'max-width', 'max-height', 'margin', 'margin-left', 'margin-right', 'margin-top', 'margin-bottom', 'padding', 'padding-left', 'padding-right', 'padding-top', 'padding-bottom', 'border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'border-width', 'border-radius', 'left', 'right', 'top', 'bottom'],
+                  replace: true,
+                  media_query: true
+                }),
+                autoprefixer({
+                  browsers: [
+                    '>1%',
+                    'last 4 versions',
+                    'Firefox ESR',
+                    'not ie < 9', // React doesn't support IE8 anyway
+                  ],
+                  flexbox: 'no-2009',
+                }),
+              ],
+            },
           },
           {
-            loader: "sass-loader", // compiles Sass to CSS
+            loader: 'sass-resources-loader',
+            options: {
+              // Provide path to the file with resources
+              resources: path.resolve(__dirname, '../src/assets/scss/index.scss'),
+            },
           },
-        ]
+        ],
       },
       {
         test:  /\.svg$/,

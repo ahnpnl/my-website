@@ -1,48 +1,45 @@
-@import '../../assets/sass/abstracts/variables';
-@import '../../assets/sass/abstracts/mixins';
-
 .wrapper__cities {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  @include mq(nth($medium-up, 1)) {
-    padding: 0 map_get($base, unit);
+  @include media-query($medium-up) {
+    padding: 0 $base-unit;
   }
 
   .cities__intro {
     @extend .wrapper__cities;
     padding: 0;
+    margin-bottom: $base-unit;
 
     h2 {
       text-align: center;
       word-spacing: 2px;
       letter-spacing: 1px;
+      text-transform: uppercase;
 
       &:after {
         display: block;
         height: 2px;
-        background-color: map_get($colors, tahitiGold);
+        background-color: $tahitiGold;
         content: " ";
         width: 100px;
         margin: 0 auto;
-        margin-top: map_get($base, 'unit');
+        margin-top: $base-unit;
       }
     }
   }
 
-  @lost clearing both;
-  @lost rounder 99.9;
   .cities__body {
     lost-center: 100% 0 flex;
     .cities__features {
-      lost-row: 1/4 map_get($base, 'unit');
+      lost-row: 1/4 $base-unit;
     }
 
-    @include mq(nth($medium-up, 1)) {
+    @include media-query($medium-up) {
       .cities__features {
-        lost-column: 1/4 0 map_get($base, 'unit');
+        lost-column: 1/4 0 $base-unit;
       }
     }
 
@@ -55,16 +52,16 @@
 .city__feature {
   display: flex;
   align-items: center;
-  @include mq(nth($small-only, 1)) {
+  @include media-query($small-only) {
     font-size: 85%;
   }
 
   svg {
-    fill: map_get($colors, tahitiGold);
+    fill: $tahitiGold;
     margin-right: 5px;
   }
 
   a {
-    color: map_get($colors, trout);
+    color: $trout;
   }
 }

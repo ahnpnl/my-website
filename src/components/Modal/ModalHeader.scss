@@ -1,15 +1,12 @@
-@import '../../assets/sass/abstracts/functions';
-@import '../../assets/sass/abstracts/variables';
-
 .modal__header {
-  border-bottom: 1px solid map_get($base, borderColor);
-  padding: map_get($base, unit);
+  border-bottom: 1px solid $base-border-color;
+  padding: $base-unit;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  font-family: map_get($font, baseFamily);
+  font-family: $base-font-family;
 
   h2 {
     margin: 0;

@@ -1,0 +1,42 @@
+/* generic */
+
+@function strip-unit($number) {
+  @if type-of(number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function lower-bound($range) {
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range, 1);
+}
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+  @return nth($range, 2);
+}
+
+/* text inputs */
+
+@function calc-input-height($line-height, $vertical-padding, $border-width) {
+  @return ($line-height + ($vertical-padding * 2) - ($border-width * 2));
+}
+
+/// Map deep get function to get nested items inside a map of variables
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+/// @example $m-breakpoint: map-deep-get($o-grid-default-config, "layouts", "M");
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map_get($map, $key);
+  }
+  @return $map;
+}
