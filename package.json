@@ -55,7 +55,7 @@
     "postcss-pxtorem": "^4.0.1",
     "promise": "7.1.1",
     "react-dev-utils": "^3.1.2",
-    "react-error-overlay": "^1.0.7",
+    "react-error-overlay": "^6.0.1",
     "react-modal": "^2.2.2",
     "react-popper": "^0.7.0",
     "react-styleguidist": "^5.4.4",
