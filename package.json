@@ -15,7 +15,7 @@
     "redux-promise-middleware": "^4.3.0"
   },
   "devDependencies": {
-    "autoprefixer": "7.1.0",
+    "autoprefixer": "9.6.4",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
